@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+/**
+ * Landing page highlighting quick-start guidance while the Ayurveda content
+ * is under construction. The layout is intentionally minimal so beginners can
+ * explore Next.js and Tailwind CSS without distraction.
+ */
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
