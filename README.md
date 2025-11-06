@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Overview
 
-## Getting Started
+This repository contains the source code for the **Ayurveda Wellness** website. It is a [Next.js](https://nextjs.org) application configured with Tailwind CSS v4 for styling and TypeScript for type safety. The project intentionally keeps its font stack local to ensure builds succeed in fully offline environments.
 
-First, run the development server:
+## Project structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Path | Purpose |
+| --- | --- |
+| `app/layout.tsx` | Defines the root layout that wraps every page. It sets global metadata and applies the global styles from `app/globals.css`. |
+| `app/page.tsx` | Renders the current landing page. While the long-form Ayurveda content is still being drafted, the page includes quick-start guidance for exploring the codebase. |
+| `app/globals.css` | Declares shared colors and font stacks and enables Tailwind's base styles. |
+| `public/` | Static assets (favicons, images, etc.) served directly by Next.js. |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Each component file includes short comments describing the main function so newcomers can quickly understand the flow.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All commands are run from the project root:
 
-## Learn More
+- `npm run dev` – Starts the development server with hot module reloading on [http://localhost:3000](http://localhost:3000).
+- `npm run build` – Creates an optimized production build. Run this before deploying.
+- `npm run start` – Serves the production build locally so you can verify the output.
+- `npm run lint` – Runs ESLint using the configuration in `eslint.config.mjs` to ensure the codebase follows the project's standards.
 
-To learn more about Next.js, take a look at the following resources:
+## Making changes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install dependencies with `npm install`.
+2. Start the dev server using `npm run dev` and edit files inside the `app/` directory.
+3. Update or add Tailwind styles in `app/globals.css` or directly via utility classes.
+4. Run `npm run lint` and `npm run build` to confirm the project is production-ready.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Additional resources
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
