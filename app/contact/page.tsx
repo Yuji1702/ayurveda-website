@@ -12,8 +12,8 @@ export const metadata: Metadata = {
  */
 export default function ContactPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 pb-16">
-      <section className="grid gap-10 pt-16 lg:grid-cols-[1fr,0.8fr]">
+    <div className="page-shell pb-16">
+      <section className="grid gap-10 pt-16 lg:grid-cols-[minmax(0,1fr),minmax(0,0.8fr)] lg:items-start">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-emerald-950">We’re here to help</h1>
           <p className="text-lg text-slate-700">
@@ -21,7 +21,7 @@ export default function ContactPage() {
             responds within one business day and provides compassionate guidance throughout
             your healing journey.
           </p>
-          <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100">
+          <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100 sm:p-8">
             <h2 className="text-xl font-semibold text-emerald-900">Contact details</h2>
             <ul className="mt-4 space-y-3 text-sm text-slate-700">
               <li>
@@ -57,7 +57,7 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-          <div className="rounded-3xl bg-white/70 p-6 shadow-inner ring-1 ring-emerald-100">
+          <div className="rounded-3xl bg-white/70 p-6 shadow-inner ring-1 ring-emerald-100 sm:p-8">
             <h2 className="text-xl font-semibold text-emerald-900">Connect on social media</h2>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
               <li>
@@ -73,7 +73,8 @@ export default function ContactPage() {
             </ul>
           </div>
         </div>
-        <div className="rounded-3xl bg-emerald-900/95 p-8 text-emerald-50 shadow-lg">
+        {/* Desktop breakpoint keeps the inquiry form visually balanced beside support cards */}
+        <div className="rounded-3xl bg-emerald-900/95 p-8 text-emerald-50 shadow-lg sm:p-10">
           <h2 className="text-2xl font-semibold text-white">Send us a message</h2>
           <p className="mt-3 text-emerald-100">
             Share your health goals, preferred consultation mode, and any urgent questions. We
@@ -82,15 +83,35 @@ export default function ContactPage() {
           <form className="mt-6 space-y-5" action="#" method="post">
             <div>
               <label htmlFor="contact-name">Full name</label>
-              <input id="contact-name" name="name" type="text" required placeholder="Your name" />
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                required
+                placeholder="Your name"
+                autoComplete="name"
+              />
             </div>
             <div>
               <label htmlFor="contact-email">Email address</label>
-              <input id="contact-email" name="email" type="email" required placeholder="you@example.com" />
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+                autoComplete="email"
+              />
             </div>
             <div>
               <label htmlFor="contact-phone">Phone / WhatsApp</label>
-              <input id="contact-phone" name="phone" type="tel" placeholder="Include country code" />
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                placeholder="Include country code"
+                autoComplete="tel"
+              />
             </div>
             <div>
               <label htmlFor="contact-message">How can we support you?</label>

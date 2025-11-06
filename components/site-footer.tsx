@@ -6,7 +6,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="bg-emerald-950 text-emerald-100">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="page-shell grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h2 className="text-lg font-semibold text-white">Dr. Zahida Sadaf</h2>
           <p className="mt-3 text-sm leading-6 text-emerald-100">
@@ -93,7 +93,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-emerald-800 bg-emerald-950/80">
-        <p className="mx-auto max-w-6xl px-6 py-4 text-xs text-emerald-200">
+        <p className="page-shell py-4 text-xs text-emerald-200">
           Healing is a sacred service. Every consultation is delivered with compassion,
           integrity, and respect for your unique wellness journey.
         </p>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/site-footer";
@@ -31,6 +31,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://drzahidasadaf.com",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 const organizationSchema = {

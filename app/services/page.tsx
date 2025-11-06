@@ -45,7 +45,7 @@ const serviceCards = [
  */
 export default function ServicesPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 pb-16">
+    <div className="page-shell pb-16">
       <section className="pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-emerald-950">Holistic services tailored to you</h1>
@@ -55,7 +55,8 @@ export default function ServicesPage() {
             supported every step of the way.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {/* Responsive grid auto-expands to three columns on widescreen displays */}
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {serviceCards.map((card) => (
             <article
               key={card.title}

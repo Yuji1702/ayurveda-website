@@ -74,8 +74,8 @@ const testimonials = [
  */
 export default function HomePage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 pb-16">
-      <section className="grid gap-10 pt-16 md:grid-cols-[1.1fr,0.9fr] md:items-center">
+    <div className="page-shell pb-16">
+      <section className="grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
             Your Online Health Consultant
@@ -118,21 +118,22 @@ export default function HomePage() {
             </div>
           </dl>
         </div>
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center lg:justify-end">
           <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-emerald-200 via-emerald-50 to-amber-100 blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
             width={520}
             height={520}
-            className="w-full max-w-sm drop-shadow-xl"
+            className="w-full max-w-xs drop-shadow-xl sm:max-w-sm"
+            sizes="(min-width: 1024px) 28rem, (min-width: 640px) 22rem, 16rem"
             priority
           />
         </div>
       </section>
 
       <section aria-labelledby="why-choose-us">
-        <div className="rounded-3xl bg-white/80 p-10 shadow-sm ring-1 ring-emerald-100">
+        <div className="rounded-3xl bg-white/80 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10">
           <h2 id="why-choose-us" className="text-3xl font-semibold text-emerald-950">
             Why choose Dr. Sadaf?
           </h2>
@@ -141,7 +142,8 @@ export default function HomePage() {
             cupping (Hijama), leech therapy, yoga, meditation, and therapeutic oil baths to
             restore harmony in the body’s systems.
           </p>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+          {/* Larger screens display principles in three balanced columns for readability */}
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {principles.map((principle) => (
               <li
                 key={principle}
@@ -166,7 +168,7 @@ export default function HomePage() {
               correction, personal assistance, medical report analysis, and regular follow-up.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.title}
@@ -201,7 +203,7 @@ export default function HomePage() {
               Real people. Real results. Personalized care that feels like family.
             </p>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.author}

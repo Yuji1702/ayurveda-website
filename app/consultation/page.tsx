@@ -50,7 +50,7 @@ const pricing = [
  */
 export default function ConsultationPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 pb-16">
+    <div className="page-shell pb-16">
       <section className="pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-emerald-950">Begin your consultation</h1>
@@ -62,7 +62,7 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <section className="mt-12 rounded-3xl bg-white/90 p-10 shadow-sm ring-1 ring-emerald-100" aria-labelledby="process">
+      <section className="mt-12 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10" aria-labelledby="process">
         <div className="max-w-3xl">
           <h2 id="process" className="text-3xl font-semibold text-emerald-950">
             Step-by-step booking process
@@ -71,7 +71,8 @@ export default function ConsultationPage() {
             From first message to ongoing mentorship, here’s how we co-create your healing plan.
           </p>
         </div>
-        <ol className="mt-8 grid gap-6 md:grid-cols-2" aria-label="Consultation steps">
+        {/* Steps align into two columns on medium screens and breathe further on desktops */}
+        <ol className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3" aria-label="Consultation steps">
           {steps.map((step, index) => (
             <li
               key={step.title}
@@ -87,15 +88,16 @@ export default function ConsultationPage() {
         </ol>
       </section>
 
-      <section className="mt-12 grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
-        <div className="rounded-3xl bg-white/90 p-10 shadow-sm ring-1 ring-emerald-100">
+      <section className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] lg:items-start">
+        <div className="rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10">
           <h2 className="text-3xl font-semibold text-emerald-950">Consultation investment</h2>
           <p className="mt-4 text-slate-700">
             Choose the currency that matches your location. Membership bundles with additional
             follow-ups and herbal refills are available on request.
           </p>
           <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-100">
-            <table className="min-w-full divide-y divide-emerald-100 text-sm">
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-emerald-100 text-sm">
               <thead className="bg-emerald-900 text-left text-xs font-semibold uppercase tracking-wide text-emerald-50">
                 <tr>
                   <th scope="col" className="px-4 py-3">
@@ -106,15 +108,16 @@ export default function ConsultationPage() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-emerald-100 bg-white/60">
-                {pricing.map((price) => (
-                  <tr key={price.region}>
-                    <td className="px-4 py-3 font-medium text-emerald-900">{price.region}</td>
-                    <td className="px-4 py-3 text-emerald-800">{price.amount}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                <tbody className="divide-y divide-emerald-100 bg-white/60">
+                  {pricing.map((price) => (
+                    <tr key={price.region}>
+                      <td className="px-4 py-3 font-medium text-emerald-900">{price.region}</td>
+                      <td className="px-4 py-3 text-emerald-800">{price.amount}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           <div className="mt-6 space-y-3 text-sm text-slate-700">
             <p>
@@ -130,7 +133,7 @@ export default function ConsultationPage() {
             </p>
           </div>
         </div>
-        <div className="rounded-3xl bg-emerald-900/95 p-10 text-emerald-50 shadow-lg">
+        <div className="rounded-3xl bg-emerald-900/95 p-8 text-emerald-50 shadow-lg sm:p-10">
           <h2 className="text-3xl font-semibold text-white">Share your health story</h2>
           <p className="mt-3 text-emerald-100">
             Complete the form and we will respond within one business day with next steps.
@@ -138,19 +141,47 @@ export default function ConsultationPage() {
           <form className="mt-6 space-y-5" action="#" method="post">
             <div>
               <label htmlFor="name">Full name</label>
-              <input id="name" name="name" type="text" required placeholder="Your name" />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                placeholder="Your name"
+                autoComplete="name"
+              />
             </div>
             <div>
               <label htmlFor="email">Email address</label>
-              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+                autoComplete="email"
+              />
             </div>
             <div>
               <label htmlFor="phone">Phone / WhatsApp</label>
-              <input id="phone" name="phone" type="tel" required placeholder="Include country code" />
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="Include country code"
+                autoComplete="tel"
+              />
             </div>
             <div>
               <label htmlFor="location">Location &amp; time zone</label>
-              <input id="location" name="location" type="text" required placeholder="City, Country (e.g., Hyderabad, India)" />
+              <input
+                id="location"
+                name="location"
+                type="text"
+                required
+                placeholder="City, Country (e.g., Hyderabad, India)"
+                autoComplete="address-level2"
+              />
             </div>
             <div>
               <label htmlFor="health-concerns">Primary health concerns</label>
@@ -164,7 +195,13 @@ export default function ConsultationPage() {
             </div>
             <div>
               <label htmlFor="preferred-time">Preferred consultation time</label>
-              <input id="preferred-time" name="preferredTime" type="text" placeholder="Example: Weekday evenings IST" />
+              <input
+                id="preferred-time"
+                name="preferredTime"
+                type="text"
+                placeholder="Example: Weekday evenings IST"
+                autoComplete="off"
+              />
             </div>
             <div>
               <button

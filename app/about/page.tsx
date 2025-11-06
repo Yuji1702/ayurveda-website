@@ -13,8 +13,8 @@ export const metadata: Metadata = {
  */
 export default function AboutPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 pb-16">
-      <section className="grid gap-10 pt-16 md:grid-cols-[1.1fr,0.9fr] md:items-center">
+    <div className="page-shell pb-16">
+      <section className="grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-emerald-950">
             Meet Dr. Zahida Sadaf
@@ -53,21 +53,23 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative flex justify-center lg:justify-end">
           <div className="absolute inset-0 -z-10 rounded-full bg-amber-100 blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Portrait illustration of Dr. Zahida Sadaf smiling confidently"
             width={520}
             height={520}
-            className="mx-auto w-full max-w-sm drop-shadow-xl"
+            className="mx-auto w-full max-w-xs drop-shadow-xl sm:max-w-sm"
+            sizes="(min-width: 1024px) 28rem, (min-width: 640px) 22rem, 16rem"
             priority
           />
         </div>
       </section>
 
-      <section className="mt-12 rounded-3xl bg-white/90 p-10 shadow-sm ring-1 ring-emerald-100">
+      <section className="mt-12 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10">
         <h2 className="text-3xl font-semibold text-emerald-950">Whole-person healing philosophy</h2>
+        {/* Medium screens (md) split the cards in two columns while mobile stays stacked */}
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <article className="rounded-2xl bg-emerald-50/80 p-6">
             <h3 className="text-xl font-semibold text-emerald-900">Holistic Mind–Body–Soul Care</h3>

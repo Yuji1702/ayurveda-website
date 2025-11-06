@@ -102,11 +102,19 @@ select:disabled {
 }
 
 section {
-  padding-block: 4rem;
+  padding-block: clamp(3rem, 6vw, 4rem);
 }
 
-@media (max-width: 640px) {
+/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
+@media (max-width: 40em) {
   section {
-    padding-block: 3rem;
+    padding-block: 2.75rem;
   }
+}
+
+/* Fluid content wrapper that centers layouts and provides adaptive gutters */
+.page-shell {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
 }

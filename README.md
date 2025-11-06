@@ -1,35 +1,43 @@
-## Overview
+# Ayurveda Wellness Website
 
-This repository contains the source code for the **Ayurveda Wellness** website. It is a [Next.js](https://nextjs.org) application configured with Tailwind CSS v4 for styling and TypeScript for type safety. The project intentionally keeps its font stack local to ensure builds succeed in fully offline environments.
+## Overview
+This repository powers the marketing site for **Dr. Zahida Sadaf**, an Ayurvedic–Unani physician who delivers holistic, root-cause healing plans. The site highlights her principles, global consultation process, regional pricing, and natural therapies such as Hijama, leech therapy, yoga, and personalized herbal formulations. It is built with the Next.js App Router so each route renders quickly, remains SEO friendly, and is ready for deployment on any Node.js host.
+
+## Tech stack
+- [Next.js 14](https://nextjs.org/docs) with the App Router and file-system based routing
+- [TypeScript](https://www.typescriptlang.org/) for static typing and editor tooling
+- [Tailwind CSS v4](https://tailwindcss.com/) utilities plus a light layer of custom globals for forms and typography
+- SVG illustration assets served from `public/`
 
 ## Project structure
-
 | Path | Purpose |
 | --- | --- |
-| `app/layout.tsx` | Defines the root layout that wraps every page. It sets global metadata and applies the global styles from `app/globals.css`. |
-| `app/page.tsx` | Renders the current landing page. While the long-form Ayurveda content is still being drafted, the page includes quick-start guidance for exploring the codebase. |
-| `app/globals.css` | Declares shared colors and font stacks and enables Tailwind's base styles. |
-| `public/` | Static assets (favicons, images, etc.) served directly by Next.js. |
+| `app/layout.tsx` | Configures global metadata, injects structured data for search engines, renders the shared header/footer, and exposes the skip link for accessibility. |
+| `app/page.tsx` | Home page hero with “Your Online Health Consultant” messaging, principles, services, and testimonials tailored to Dr. Sadaf’s practice. |
+| `app/about/page.tsx` | Detailed biography describing qualifications, healing philosophy, and therapy modalities with supporting imagery. |
+| `app/services/page.tsx` | Card grid covering PCOS/PCOD, thyroid, diabetes, hormonal balance, skin wellness, and detox programs, each linked to booking. |
+| `app/consultation/page.tsx` | Step-by-step booking flow, regional pricing table, WhatsApp link, and an intake form that gathers name, contact details, location, and health concerns. |
+| `app/contact/page.tsx` | Contact options, social links, and a general inquiry form for collaborations or follow-up questions. |
+| `app/globals.css` | Sets theme tokens, form styles, selection colors, and responsive section padding shared by every page. |
+| `components/site-header.tsx` | Client component that renders the brand identity, accessible desktop navigation, and a mobile menu toggle. |
+| `components/site-footer.tsx` | Global footer with quick links, contact information, and the core brand statement. |
+| `public/dr-zahida-sadaf-portrait.svg` | Accessible illustration used on multiple pages to reinforce the holistic brand. |
 
-Each component file includes short comments describing the main function so newcomers can quickly understand the flow.
+## Helpful scripts
+Run commands from the project root:
+- `npm run dev` – Starts a hot-reloading dev server at [http://localhost:3000](http://localhost:3000).
+- `npm run build` – Generates an optimized production build.
+- `npm run start` – Serves the last production build locally for smoke testing.
+- `npm run lint` – Lints the entire codebase using the shared ESLint configuration.
 
-## Scripts
-
-All commands are run from the project root:
-
-- `npm run dev` – Starts the development server with hot module reloading on [http://localhost:3000](http://localhost:3000).
-- `npm run build` – Creates an optimized production build. Run this before deploying.
-- `npm run start` – Serves the production build locally so you can verify the output.
-- `npm run lint` – Runs ESLint using the configuration in `eslint.config.mjs` to ensure the codebase follows the project's standards.
-
-## Making changes
-
+## Getting started
 1. Install dependencies with `npm install`.
-2. Start the dev server using `npm run dev` and edit files inside the `app/` directory.
-3. Update or add Tailwind styles in `app/globals.css` or directly via utility classes.
-4. Run `npm run lint` and `npm run build` to confirm the project is production-ready.
+2. Launch the dev server using `npm run dev`.
+3. Edit files under `app/` or `components/`. Every major section includes concise comments so newcomers can navigate quickly.
+4. Before deploying, run `npm run lint` and `npm run build` to verify code quality and bundle health.
 
-## Additional resources
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+## Accessibility & SEO notes
+- Every page defines page-specific `<title>` and `<meta name="description">` entries via Next.js metadata exports.
+- The root layout adds [Schema.org Physician](https://schema.org/Physician) JSON-LD to improve search discoverability.
+- Forms use semantic `<label>` elements, required states, and autocomplete hints for better usability.
+- Responsive navigation supports keyboard focus, skip links, and a mobile toggle so the experience remains inclusive on all devices.
