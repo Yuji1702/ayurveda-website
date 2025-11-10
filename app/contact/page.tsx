@@ -74,9 +74,9 @@ export default function ContactPage() {
           </div>
         </div>
         {/* Desktop breakpoint keeps the inquiry form visually balanced beside support cards */}
-        <div className="rounded-3xl surface-card p-8 text-white shadow-lg sm:p-10">
-          <h2 className="text-2xl font-semibold text-white">Send us a message</h2>
-          <p className="mt-3 text-white/80">
+        <div className="rounded-3xl surface-card p-8 shadow-lg sm:p-10">
+          <h2 className="text-2xl font-semibold">Send us a message</h2>
+          <p className="mt-3">
             Share your health goals, preferred consultation mode, and any urgent questions. We
             will follow up with tailored next steps.
           </p>
@@ -132,13 +132,13 @@ export default function ContactPage() {
               </button>
             </div>
           </form>
-          <div className="mt-8 rounded-2xl bg-white/10 p-5 text-sm">
-            <h3 className="font-semibold text-white">Clinic location</h3>
-            <p className="mt-2 text-white/80">
+          <div className="mt-8 rounded-2xl surface-overlay p-5 text-sm shadow-inner">
+            <h3 className="font-semibold">Clinic location</h3>
+            <p className="mt-2 text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
               Hyderabad, Telangana, India. Virtual consultations are available for clients in
               Canada, the United States, the United Kingdom, Australia, and beyond.
             </p>
-            <div className="mt-4 h-40 w-full rounded-xl bg-gradient-to-br from-[color:rgba(210,109,130,0.45)] to-[color:rgba(107,143,110,0.4)] p-4 text-xs text-white/85">
+            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,black_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,black_10%)]">
               Interactive map integration coming soon.
             </div>
           </div>

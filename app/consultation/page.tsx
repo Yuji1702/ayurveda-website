@@ -78,7 +78,7 @@ export default function ConsultationPage() {
               key={step.title}
               className="flex flex-col gap-3 rounded-3xl bg-[color:color-mix(in_srgb,var(--accent-soft)_45%,white_55%)] p-6"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_85%,black_15%)] text-sm font-semibold text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_80%,black_20%)] text-sm font-semibold text-white">
                 {index + 1}
               </span>
               <h3 className="text-lg font-semibold text-[color:var(--foreground)]">{step.title}</h3>
@@ -133,9 +133,9 @@ export default function ConsultationPage() {
             </p>
           </div>
         </div>
-        <div className="rounded-3xl surface-card p-8 text-white shadow-lg sm:p-10">
-          <h2 className="text-3xl font-semibold text-white">Share your health story</h2>
-          <p className="mt-3 text-white/80">
+        <div className="rounded-3xl surface-card p-8 shadow-lg sm:p-10">
+          <h2 className="text-3xl font-semibold">Share your health story</h2>
+          <p className="mt-3">
             Complete the form and we will respond within one business day with next steps.
           </p>
           <form className="mt-6 space-y-5" action="#" method="post">
@@ -212,7 +212,7 @@ export default function ConsultationPage() {
               </button>
             </div>
           </form>
-          <p className="mt-6 text-xs text-white/75">
+          <p className="mt-6 text-xs text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">
             Consultations are valid for 15 days and include one detailed follow-up. Memberships
             provide extended monitoring, seasonal detox plans, and discounted herbal refills.
           </p>

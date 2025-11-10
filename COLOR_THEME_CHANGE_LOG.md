@@ -20,3 +20,9 @@ The deep sage and rose pairing mirrors Ayurvedic botanicals and calming spa envi
 - `components/site-header.tsx` & `components/site-footer.tsx` – Navigation, mobile menu, and footer surfaces aligned with deep sage and rose CTAs.
 - `app/page.tsx`, `app/about/page.tsx`, `app/services/page.tsx`, `app/consultation/page.tsx`, `app/contact/page.tsx` – Replaced emerald utilities with semantic tokens for hero messaging, cards, tables, and forms.
 - `app/globals.css` – Introduced Style B tokens plus `.btn-primary`, `.surface-section`, and `.surface-card` helpers for consistent application.
+
+## Contrast refinement sprint
+- Tuned `.btn-primary` and default link colors toward deeper rose mixes so white text and pale backgrounds now exceed 4.5:1 contrast.
+- Lightened `.surface-card` panels and added `.surface-overlay` to keep testimonial quotes and contact guidance legible on layered surfaces.
+- Updated navigation hover/active states, consultation badges, and service links with darker blends to preserve readability during interaction.
+- Added `html[data-theme="test"]` overrides and `toggleThemeTestMode` to flip into an A/B readability variant without code changes.

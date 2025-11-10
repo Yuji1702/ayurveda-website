@@ -69,7 +69,7 @@ export default function ServicesPage() {
               <div className="mt-6">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center text-sm font-semibold text-[color:var(--accent)] underline-offset-4 hover:underline"
+                  className="inline-flex items-center text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,black_25%)] underline-offset-4 hover:underline"
                   aria-label={`Schedule a consultation about ${card.title}`}
                 >
                   Book consultation

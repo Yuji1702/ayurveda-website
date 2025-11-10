@@ -181,7 +181,7 @@ export default function HomePage() {
                 <div className="mt-6">
                   <Link
                     href="/consultation"
-                    className="text-sm font-semibold text-[color:var(--accent)] underline-offset-4 hover:underline"
+                    className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,black_25%)] underline-offset-4 hover:underline"
                     aria-label={`Book a consultation to learn more about ${service.title}`}
                   >
                     Book your personalized plan
@@ -194,12 +194,12 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="testimonials">
-        <div className="rounded-3xl surface-card px-8 py-12 text-white shadow-lg">
+        <div className="rounded-3xl surface-card px-8 py-12 shadow-lg">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 id="testimonials" className="text-3xl font-semibold text-white">
+            <h2 id="testimonials" className="text-3xl font-semibold">
               Stories of renewed balance
             </h2>
-            <p className="mt-3 text-white/80">
+            <p className="mt-3">
               Real people. Real results. Personalized care that feels like family.
             </p>
           </div>
@@ -207,12 +207,12 @@ export default function HomePage() {
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.author}
-                className="flex h-full flex-col justify-between rounded-3xl bg-[color:color-mix(in_srgb,var(--accent)_30%,black_20%)]/80 p-6 text-left"
+                className="flex h-full flex-col justify-between rounded-3xl surface-overlay p-6 text-left shadow-sm"
               >
-                <blockquote className="text-sm leading-6 text-white/90">
+                <blockquote className="text-sm leading-6">
                   “{testimonial.quote}”
                 </blockquote>
-                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-white/70">
+                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-[color:color-mix(in_srgb,var(--foreground)_60%,black_40%)]">
                   {testimonial.author}
                 </figcaption>
               </figure>
