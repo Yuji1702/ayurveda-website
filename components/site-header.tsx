@@ -31,12 +31,12 @@ export function SiteHeader() {
   const linkBaseClasses =
     "rounded-full px-3 py-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
   const navClassName = [
-    "w-full flex-col gap-4 rounded-3xl bg-emerald-800/80 px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
+    "w-full flex-col gap-4 rounded-3xl bg-[color:rgba(62,106,85,0.82)] px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
     isMenuOpen ? "flex" : "hidden md:flex",
   ].join(" ");
 
   return (
-    <header className="bg-emerald-900 text-white shadow-sm">
+    <header className="bg-[color:var(--foreground)] text-white shadow-sm">
       <div className="page-shell py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex w-full items-center justify-between gap-3 md:w-auto">
@@ -44,13 +44,13 @@ export function SiteHeader() {
               <Link href="/" className="text-lg font-semibold tracking-tight">
                 Dr. Zahida Sadaf
               </Link>
-              <p className="text-sm text-emerald-100">
+              <p className="text-sm text-[color:rgba(255,255,255,0.75)]">
                 Ayurvedic-Unani Physician &amp; Online Health Consultant
               </p>
             </div>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-emerald-500/60 text-emerald-50 transition hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.35)] text-white transition hover:bg-[color:color-mix(in_srgb,var(--foreground)_85%,black_15%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
               aria-label="Toggle navigation menu"
               aria-expanded={isMenuOpen}
               aria-controls="primary-navigation"
@@ -82,8 +82,8 @@ export function SiteHeader() {
                       aria-current={active ? "page" : undefined}
                       className={`${linkBaseClasses} ${
                         active
-                          ? "bg-emerald-800 text-amber-200 md:bg-emerald-800/70"
-                          : "hover:bg-emerald-800/70"
+                          ? "bg-[color:color-mix(in_srgb,var(--accent)_85%,black_15%)] text-white md:bg-[color:color-mix(in_srgb,var(--accent)_70%,black_10%)]"
+                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_20%,white_80%)]"
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -95,7 +95,7 @@ export function SiteHeader() {
               <li className="md:hidden">
                 <Link
                   href="/consultation"
-                  className="block rounded-full bg-amber-300 px-4 py-2 text-center text-sm font-semibold text-emerald-950 shadow transition hover:bg-amber-200"
+                  className="block text-center text-sm font-semibold btn-primary shadow"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Book Consultation
@@ -107,7 +107,7 @@ export function SiteHeader() {
           <div className="hidden md:flex md:items-center">
             <Link
               href="/consultation"
-              className="rounded-full bg-amber-300 px-5 py-2 text-sm font-semibold text-emerald-950 shadow transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-100"
+              className="btn-primary text-sm shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
             >
               Book Consultation
             </Link>

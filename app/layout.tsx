@@ -102,17 +102,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-emerald-50 font-sans text-slate-900 antialiased">
+      <body className="min-h-screen font-sans antialiased">
         <Script id="organization-schema" type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </Script>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-emerald-900"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-[color:var(--foreground)]"
         >
           Skip to main content
         </a>
-        <div className="flex min-h-screen flex-col bg-gradient-to-b from-emerald-50 via-slate-50 to-amber-50">
+        <div className="flex min-h-screen flex-col bg-gradient-to-b from-[#f9e3e7] via-[#fef6f8] to-[#e4f0ea]">
           <SiteHeader />
           <main id="main-content" className="flex-1">
             {children}

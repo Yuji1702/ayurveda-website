@@ -23,6 +23,11 @@ This repository powers the marketing site for **Dr. Zahida Sadaf**, an Ayurvedic
 | `components/site-footer.tsx` | Global footer with quick links, contact information, and the core brand statement. |
 | `public/dr-zahida-sadaf-portrait.svg` | Accessible illustration used on multiple pages to reinforce the holistic brand. |
 
+## How the site works
+- **Routing overview** – The App Router maps `/` to the homepage hero and testimonials, `/about` to Dr. Sadaf’s biography, `/services` to the treatment cards, and `/consultation` to the booking workflow with pricing and intake form. `/contact` delivers a direct outreach form alongside quick links, ensuring every visitor can choose a preferred channel.
+- **Component responsibilities** – The hero, principle list, services grid, testimonials, and footer live inside composable sections so the same branding system is reused across routes. `SiteHeader` keeps navigation and CTAs accessible, while the consultation and contact forms share consistent label, input, and `btn-primary` button styling defined in `globals.css`.
+- **Data + UI flow** – Content arrays inside each page (principles, services, steps, testimonials, pricing) drive the UI by mapping over structured data to render cards, list items, and tables. Calls-to-action route visitors into the consultation journey, where the process explainer, regional pricing table, WhatsApp link, and intake form feed into Dr. Sadaf’s personalized care workflow.
+
 ## Helpful scripts
 Run commands from the project root:
 - `npm run dev` – Starts a hot-reloading dev server at [http://localhost:3000](http://localhost:3000).
