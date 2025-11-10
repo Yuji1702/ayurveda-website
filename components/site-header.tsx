@@ -31,7 +31,7 @@ export function SiteHeader() {
   const linkBaseClasses =
     "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
   const navClassName = [
-    "w-full flex-col gap-4 rounded-3xl bg-[color:rgba(62,106,85,0.82)] px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
+    "w-full flex-col gap-4 rounded-3xl bg-[color:rgba(47,74,61,0.82)] px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
     isMenuOpen ? "flex" : "hidden md:flex",
   ].join(" ");
 

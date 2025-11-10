@@ -75,7 +75,7 @@ const testimonials = [
 export default function HomePage() {
   return (
     <div className="page-shell pb-16">
-      <section className="grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
+      <section className="surface-section grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[color:color-mix(in_srgb,var(--accent)_65%,black_35%)]">
             Your Online Health Consultant

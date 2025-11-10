@@ -46,7 +46,7 @@ const serviceCards = [
 export default function ServicesPage() {
   return (
     <div className="page-shell pb-16">
-      <section className="pt-16">
+      <section className="surface-section pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">Holistic services tailored to you</h1>
           <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
