@@ -1,65 +1,225 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Your Online Health Consultant for Holistic Healing",
+  description:
+    "Book Ayurvedic-Unani online consultations with Dr. Zahida Sadaf for PCOS, thyroid, diabetes, hormonal balance, and skin wellness.",
+};
+
+const principles = [
+  "Holistic mind–body–soul alignment",
+  "Natural therapies with diet and lifestyle correction",
+  "Safe herbal medicines with no side effects",
+  "Root-cause treatment for complete healing",
+  "Prevention-focused wellness guidance",
+  "2,500-year-old traditional wisdom",
+  "Individualized care and global support",
+];
+
+const services = [
+  {
+    title: "PCOS / PCOD Relief",
+    description:
+      "Restore hormonal harmony with personalized Unani formulations, anti-inflammatory nutrition, and detox therapies that balance cycles naturally.",
+  },
+  {
+    title: "Thyroid Balance",
+    description:
+      "Support thyroid function through gut-healing herbs, targeted minerals, yoga breathwork, and stress resilience coaching.",
+  },
+  {
+    title: "Diabetes Care",
+    description:
+      "Stabilize blood sugar with metabolic reset plans combining organic herbs, mindful movement, and sustainable lifestyle changes.",
+  },
+  {
+    title: "Hormonal Wellness",
+    description:
+      "Address adrenal fatigue, fertility concerns, and mood swings with individualized herbal tonics, Hijama, and restorative routines.",
+  },
+  {
+    title: "Skin Healing",
+    description:
+      "Nurture radiant skin by treating the root cause of acne, eczema, and pigmentation through detoxification, cupping, and herbal therapies.",
+  },
+  {
+    title: "Holistic Detox & Immunity",
+    description:
+      "Strengthen digestion and immunity with Hijama (cupping), leech therapy, therapeutic oil baths, and mindful meditation guidance.",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Within two months my PCOS symptoms calmed, my cycle returned, and I felt lighter thanks to Dr. Sadaf’s compassionate guidance.",
+    author: "Ayesha, India",
+  },
+  {
+    quote:
+      "Her Unani detox plan balanced my thyroid without harsh medication and the follow-up support kept me accountable.",
+    author: "Hiba, Canada",
+  },
+  {
+    quote:
+      "The personalized herbs and diet plan reduced my blood sugar spikes and improved my sleep in just six weeks.",
+    author: "Rashid, UAE",
+  },
+];
+
+/**
+ * Home page presenting key value propositions, services, and social proof for quick orientation.
+ */
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="page-shell pb-16">
+      <section className="grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[color:color-mix(in_srgb,var(--accent)_65%,black_35%)]">
+            Your Online Health Consultant
           </p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-[color:var(--foreground)] sm:text-5xl">
+            Holistic Ayurvedic-Unani care that heals the root cause
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+            Dr. Zahida Sadaf blends classical Unani wisdom with modern gut health
+            research to reverse PCOS/PCOD, thyroid issues, diabetes, hormonal
+            imbalances, and chronic skin problems. Healing is her service—not a
+            business—and every consultation begins with deep listening.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/consultation"
+              className="btn-primary text-sm shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
+            >
+              Book Consultation (Starting at $80)
+            </Link>
+            <Link
+              href="/about"
+              className="rounded-full bg-white/85 px-6 py-3 text-sm font-semibold text-[color:var(--foreground)] shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
+            >
+              Meet Dr. Sadaf
+            </Link>
+          </div>
+          <dl className="mt-10 grid gap-6 sm:grid-cols-3">
+            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
+              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">Initial Consultation</dt>
+              <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">45–60 minutes</dd>
+            </div>
+            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
+              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">Follow-up Care</dt>
+              <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">Monthly plans</dd>
+            </div>
+            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
+              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">Global Support</dt>
+              <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">Consults worldwide</dd>
+            </div>
+          </dl>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="relative flex justify-center lg:justify-end">
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[#f4c8d5] via-[#f9e3e7] to-[#d8e5d7] blur-3xl" />
+          <Image
+            src="/dr-zahida-sadaf-portrait.svg"
+            alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
+            width={520}
+            height={520}
+            className="w-full max-w-xs drop-shadow-xl sm:max-w-sm"
+            sizes="(min-width: 1024px) 28rem, (min-width: 640px) 22rem, 16rem"
+            priority
+          />
         </div>
-      </main>
+      </section>
+
+      <section aria-labelledby="why-choose-us" className="surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] sm:p-10">
+        <div>
+          <h2 id="why-choose-us" className="text-3xl font-semibold text-[color:var(--foreground)]">
+            Why choose Dr. Sadaf?
+          </h2>
+          <p className="mt-4 max-w-3xl text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+            Discover holistic regimens that combine organic herbal medicines, diet therapy,
+            cupping (Hijama), leech therapy, yoga, meditation, and therapeutic oil baths to
+            restore harmony in the body’s systems.
+          </p>
+          {/* Larger screens display principles in three balanced columns for readability */}
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {principles.map((principle) => (
+              <li
+                key={principle}
+                className="flex items-start gap-3 rounded-2xl bg-[color:color-mix(in_srgb,var(--accent-soft)_40%,white_60%)] p-4 text-sm text-[color:var(--foreground)]"
+              >
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-[color:var(--accent)]" aria-hidden="true" />
+                <span>{principle}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="our-services">
+        <div className="flex flex-col gap-8">
+          <div className="max-w-3xl">
+            <h2 id="our-services" className="text-3xl font-semibold text-[color:var(--foreground)]">
+              Our services for chronic wellness
+            </h2>
+            <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+              Personalized care plans include pure Unani formulations, diet therapy, lifestyle
+              correction, personal assistance, medical report analysis, and regular follow-up.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div>
+                  <h3 className="text-xl font-semibold text-[color:var(--foreground)]">{service.title}</h3>
+                  <p className="mt-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">{service.description}</p>
+                </div>
+                <div className="mt-6">
+                  <Link
+                    href="/consultation"
+                    className="text-sm font-semibold text-[color:var(--accent)] underline-offset-4 hover:underline"
+                    aria-label={`Book a consultation to learn more about ${service.title}`}
+                  >
+                    Book your personalized plan
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="testimonials">
+        <div className="rounded-3xl surface-card px-8 py-12 text-white shadow-lg">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 id="testimonials" className="text-3xl font-semibold text-white">
+              Stories of renewed balance
+            </h2>
+            <p className="mt-3 text-white/80">
+              Real people. Real results. Personalized care that feels like family.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <figure
+                key={testimonial.author}
+                className="flex h-full flex-col justify-between rounded-3xl bg-[color:color-mix(in_srgb,var(--accent)_30%,black_20%)]/80 p-6 text-left"
+              >
+                <blockquote className="text-sm leading-6 text-white/90">
+                  “{testimonial.quote}”
+                </blockquote>
+                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-white/70">
+                  {testimonial.author}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
