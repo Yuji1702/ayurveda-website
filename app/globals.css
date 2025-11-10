@@ -140,3 +140,7 @@ section {
 .surface-card {
   background: var(--support);
 }
+* {
+  outline: 0.3px solid rgba(255,0,0,0.05);
+}
+
