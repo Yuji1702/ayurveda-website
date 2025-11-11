@@ -5,7 +5,7 @@ import Link from "next/link";
  */
 export function SiteFooter() {
   return (
-    <footer className="bg-[color:var(--foreground)] text-[color:rgba(255,255,255,0.9)]">
+    <footer className="bg-[color:var(--forest)] text-[color:rgba(255,255,255,0.9)]">
       <div className="page-shell grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h2 className="text-lg font-semibold text-white">Dr. Zahida Sadaf</h2>
@@ -92,7 +92,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-[color:rgba(255,255,255,0.2)] bg-[color:color-mix(in_srgb,var(--foreground)_90%,black_10%)]">
+      <div className="border-t border-[color:rgba(255,255,255,0.2)] bg-[color:color-mix(in_srgb,var(--forest)_90%,black_10%)]">
         <p className="page-shell py-4 text-xs text-[color:rgba(255,255,255,0.7)]">
           Healing is a sacred service. Every consultation is delivered with compassion,
           integrity, and respect for your unique wellness journey.

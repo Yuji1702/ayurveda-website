@@ -77,13 +77,13 @@ export default function HomePage() {
     <div className="page-shell pb-16">
       <section className="surface-section grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[color:color-mix(in_srgb,var(--accent)_65%,black_35%)]">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[color:color-mix(in_srgb,var(--accent)_65%,var(--muted)_35%)]">
             Your Online Health Consultant
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-[color:var(--foreground)] sm:text-5xl">
             Holistic Ayurvedic-Unani care that heals the root cause
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="mt-6 max-w-xl text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Dr. Zahida Sadaf blends classical Unani wisdom with modern gut health
             research to reverse PCOS/PCOD, thyroid issues, diabetes, hormonal
             imbalances, and chronic skin problems. Healing is her service—not a
@@ -98,28 +98,28 @@ export default function HomePage() {
             </Link>
             <Link
               href="/about"
-              className="rounded-full bg-white/85 px-6 py-3 text-sm font-semibold text-[color:var(--foreground)] shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
+              className="rounded-full bg-white/85 px-6 py-3 text-sm font-semibold text-[color:var(--foreground)] shadow transition hover:bg-[color:color-mix(in_srgb,white_90%,var(--accent-soft)_10%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
             >
               Meet Dr. Sadaf
             </Link>
           </div>
           <dl className="mt-10 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
-              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">Initial Consultation</dt>
+            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)]">
+              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">Initial Consultation</dt>
               <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">45–60 minutes</dd>
             </div>
-            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
-              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">Follow-up Care</dt>
+            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)]">
+              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">Follow-up Care</dt>
               <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">Monthly plans</dd>
             </div>
-            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
-              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">Global Support</dt>
+            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)]">
+              <dt className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">Global Support</dt>
               <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">Consults worldwide</dd>
             </div>
           </dl>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[#f4c8d5] via-[#f9e3e7] to-[#d8e5d7] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(107,142,35,0.26)] via-[color:rgba(200,162,95,0.24)] to-[color:rgba(201,111,72,0.22)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
@@ -132,12 +132,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="why-choose-us" className="surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] sm:p-10">
+      <section aria-labelledby="why-choose-us" className="surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
         <div>
           <h2 id="why-choose-us" className="text-3xl font-semibold text-[color:var(--foreground)]">
             Why choose Dr. Sadaf?
           </h2>
-          <p className="mt-4 max-w-3xl text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="mt-4 max-w-3xl text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Discover holistic regimens that combine organic herbal medicines, diet therapy,
             cupping (Hijama), leech therapy, yoga, meditation, and therapeutic oil baths to
             restore harmony in the body’s systems.
@@ -163,25 +163,25 @@ export default function HomePage() {
             <h2 id="our-services" className="text-3xl font-semibold text-[color:var(--foreground)]">
               Our services for chronic wellness
             </h2>
-            <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+            <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
               Personalized care plans include pure Unani formulations, diet therapy, lifestyle
               correction, personal assistance, medical report analysis, and regular follow-up.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
+              {services.map((service) => (
               <article
                 key={service.title}
-                className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] transition hover:-translate-y-1 hover:shadow-lg"
+                className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-[color:var(--foreground)]">{service.title}</h3>
-                  <p className="mt-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">{service.description}</p>
+                  <p className="mt-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">{service.description}</p>
                 </div>
                 <div className="mt-6">
                   <Link
                     href="/consultation"
-                    className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,black_25%)] underline-offset-4 hover:underline"
+                    className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,var(--muted)_25%)] underline-offset-4 hover:underline"
                     aria-label={`Book a consultation to learn more about ${service.title}`}
                   >
                     Book your personalized plan
@@ -194,29 +194,29 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="testimonials">
-        <div className="rounded-3xl surface-card px-8 py-12 shadow-lg">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 id="testimonials" className="text-3xl font-semibold">
-              Stories of renewed balance
-            </h2>
-            <p className="mt-3">
+          <div className="rounded-3xl surface-card px-8 py-12 shadow-lg">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 id="testimonials" className="text-3xl font-semibold">
+                Stories of renewed balance
+              </h2>
+              <p className="mt-3">
               Real people. Real results. Personalized care that feels like family.
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <figure
-                key={testimonial.author}
-                className="flex h-full flex-col justify-between rounded-3xl surface-overlay p-6 text-left shadow-sm"
-              >
-                <blockquote className="text-sm leading-6">
-                  “{testimonial.quote}”
-                </blockquote>
-                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-[color:color-mix(in_srgb,var(--foreground)_60%,black_40%)]">
-                  {testimonial.author}
-                </figcaption>
-              </figure>
-            ))}
+                <figure
+                  key={testimonial.author}
+                  className="flex h-full flex-col justify-between rounded-3xl surface-overlay p-6 text-left shadow-sm"
+                >
+                  <blockquote className="text-sm leading-6">
+                    “{testimonial.quote}”
+                  </blockquote>
+                  <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-[color:color-mix(in_srgb,var(--foreground)_60%,var(--muted)_40%)]">
+                    {testimonial.author}
+                  </figcaption>
+                </figure>
+              ))}
           </div>
         </div>
       </section>

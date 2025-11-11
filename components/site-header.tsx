@@ -29,14 +29,14 @@ export function SiteHeader() {
   };
 
   const linkBaseClasses =
-    "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+    "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]";
   const navClassName = [
-    "w-full flex-col gap-4 rounded-3xl bg-[color:rgba(47,74,61,0.82)] px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
+    "w-full flex-col gap-4 rounded-3xl bg-[color:color-mix(in_srgb,var(--forest)_88%,black_12%)] px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
     isMenuOpen ? "flex" : "hidden md:flex",
   ].join(" ");
 
   return (
-    <header className="bg-[color:var(--foreground)] text-white shadow-sm">
+    <header className="bg-[color:var(--forest)] text-white shadow-sm">
       <div className="page-shell py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex w-full items-center justify-between gap-3 md:w-auto">
@@ -50,7 +50,7 @@ export function SiteHeader() {
             </div>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.35)] text-white transition hover:bg-[color:color-mix(in_srgb,var(--foreground)_85%,black_15%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.35)] text-white transition hover:bg-[color:color-mix(in_srgb,var(--forest)_85%,black_15%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
               aria-label="Toggle navigation menu"
               aria-expanded={isMenuOpen}
               aria-controls="primary-navigation"
@@ -83,7 +83,7 @@ export function SiteHeader() {
                       className={`${linkBaseClasses} ${
                         active
                           ? "bg-[color:color-mix(in_srgb,var(--accent)_80%,black_20%)]"
-                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_65%,black_35%)]"
+                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_65%,var(--muted)_35%)]"
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >

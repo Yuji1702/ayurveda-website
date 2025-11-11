@@ -49,7 +49,7 @@ export default function ServicesPage() {
       <section className="surface-section pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">Holistic services tailored to you</h1>
-          <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Each service combines pure Unani formulations, diet therapy, lifestyle correction,
             personal assistance, medical report analysis, and regular follow-up so you feel
             supported every step of the way.
@@ -60,16 +60,16 @@ export default function ServicesPage() {
           {serviceCards.map((card) => (
             <article
               key={card.title}
-              className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] transition hover:-translate-y-1 hover:shadow-lg"
+              className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div>
                 <h2 className="text-2xl font-semibold text-[color:var(--foreground)]">{card.title}</h2>
-                <p className="mt-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">{card.description}</p>
+                <p className="mt-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">{card.description}</p>
               </div>
               <div className="mt-6">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,black_25%)] underline-offset-4 hover:underline"
+                  className="inline-flex items-center text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,var(--muted)_25%)] underline-offset-4 hover:underline"
                   aria-label={`Schedule a consultation about ${card.title}`}
                 >
                   Book consultation

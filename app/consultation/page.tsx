@@ -54,7 +54,7 @@ export default function ConsultationPage() {
       <section className="surface-section pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">Begin your consultation</h1>
-          <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Consultations start at $80 and are valid for 15 days, giving you time to integrate
             your personalized plan. Dr. Zahida Sadaf believes healing is a sacred service, so
             every step is transparent, compassionate, and designed around your lifestyle.
@@ -62,12 +62,12 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <section className="mt-12 surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] sm:p-10" aria-labelledby="process">
+      <section className="mt-12 surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10" aria-labelledby="process">
         <div className="max-w-3xl">
           <h2 id="process" className="text-3xl font-semibold text-[color:var(--foreground)]">
             Step-by-step booking process
           </h2>
-          <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             From first message to ongoing mentorship, here’s how we co-create your healing plan.
           </p>
         </div>
@@ -78,32 +78,32 @@ export default function ConsultationPage() {
               key={step.title}
               className="flex flex-col gap-3 rounded-3xl bg-[color:color-mix(in_srgb,var(--accent-soft)_45%,white_55%)] p-6"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_80%,black_20%)] text-sm font-semibold text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_80%,var(--muted)_20%)] text-sm font-semibold text-white">
                 {index + 1}
               </span>
               <h3 className="text-lg font-semibold text-[color:var(--foreground)]">{step.title}</h3>
-              <p className="text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">{step.description}</p>
+              <p className="text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">{step.description}</p>
             </li>
           ))}
         </ol>
       </section>
 
       <section className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] lg:items-start">
-        <div className="rounded-3xl bg-white/95 p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] sm:p-10">
+        <div className="rounded-3xl bg-white/95 p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
           <h2 className="text-3xl font-semibold text-[color:var(--foreground)]">Consultation investment</h2>
-          <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Choose the currency that matches your location. Membership bundles with additional
             follow-ups and herbal refills are available on request.
           </p>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-[color:color-mix(in_srgb,var(--support)_25%,white_75%)]">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-[color:color-mix(in_srgb,var(--support)_35%,white_65%)]">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] text-sm">
-              <thead className="bg-[color:color-mix(in_srgb,var(--foreground)_90%,black_10%)] text-left text-xs font-semibold uppercase tracking-wide text-white">
-                <tr>
-                  <th scope="col" className="px-4 py-3">
-                    Region
-                  </th>
-                  <th scope="col" className="px-4 py-3">
+                <thead className="bg-[color:color-mix(in_srgb,var(--forest)_90%,black_10%)] text-left text-xs font-semibold uppercase tracking-wide text-white">
+                  <tr>
+                    <th scope="col" className="px-4 py-3">
+                      Region
+                    </th>
+                    <th scope="col" className="px-4 py-3">
                     Consultation fee
                   </th>
                 </tr>
@@ -112,14 +112,14 @@ export default function ConsultationPage() {
                   {pricing.map((price) => (
                     <tr key={price.region}>
                       <td className="px-4 py-3 font-medium text-[color:var(--foreground)]">{price.region}</td>
-                      <td className="px-4 py-3 text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">{price.amount}</td>
+                      <td className="px-4 py-3 text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">{price.amount}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-          <div className="mt-6 space-y-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">
+          <div className="mt-6 space-y-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
             <p>
               After payment, share the receipt on WhatsApp for scheduling. Secure online payment
               integrations are coming soon—meanwhile, bank transfer and UPI details will be
@@ -212,7 +212,7 @@ export default function ConsultationPage() {
               </button>
             </div>
           </form>
-          <p className="mt-6 text-xs text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">
+          <p className="mt-6 text-xs text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
             Consultations are valid for 15 days and include one detailed follow-up. Memberships
             provide extended monitoring, seasonal detox plans, and discounted herbal refills.
           </p>

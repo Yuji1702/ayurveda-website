@@ -16,14 +16,14 @@ export default function ContactPage() {
       <section className="grid gap-10 pt-16 lg:grid-cols-[minmax(0,1fr),minmax(0,0.8fr)] lg:items-start">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">We’re here to help</h1>
-          <p className="text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+          <p className="text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Reach out for appointments, speaking engagements, or collaborations. Our team
             responds within one business day and provides compassionate guidance throughout
             your healing journey.
           </p>
-          <div className="rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] sm:p-8">
+          <div className="rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-8">
             <h2 className="text-xl font-semibold text-[color:var(--foreground)]">Contact details</h2>
-            <ul className="mt-4 space-y-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">
+            <ul className="mt-4 space-y-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
               <li>
                 <strong className="text-[color:var(--foreground)]">WhatsApp:</strong>{" "}
                 <a className="underline" href="https://wa.me/917667265892" target="_blank" rel="noreferrer">
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 Book consultation
               </Link>
               <a
-                className="rounded-full bg-white px-4 py-2 text-[color:var(--foreground)] shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] transition hover:bg-[#fde6ec]"
+                className="rounded-full bg-white px-4 py-2 text-[color:var(--foreground)] shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] transition hover:bg-[color:color-mix(in_srgb,white_90%,var(--accent-soft)_10%)]"
                 href="https://wa.me/917667265892"
                 target="_blank"
                 rel="noreferrer"
@@ -57,9 +57,9 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-          <div className="rounded-3xl bg-white/80 p-6 shadow-inner ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] sm:p-8">
+          <div className="rounded-3xl bg-white/80 p-6 shadow-inner ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-8">
             <h2 className="text-xl font-semibold text-[color:var(--foreground)]">Connect on social media</h2>
-            <ul className="mt-4 space-y-2 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,black_35%)]">
+            <ul className="mt-4 space-y-2 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
               <li>
                 <a className="underline" href="https://www.instagram.com/drzahidasadaf" target="_blank" rel="noreferrer">
                   Instagram
@@ -134,11 +134,11 @@ export default function ContactPage() {
           </form>
           <div className="mt-8 rounded-2xl surface-overlay p-5 text-sm shadow-inner">
             <h3 className="font-semibold">Clinic location</h3>
-            <p className="mt-2 text-[color:color-mix(in_srgb,var(--foreground)_70%,black_30%)]">
+            <p className="mt-2 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
               Hyderabad, Telangana, India. Virtual consultations are available for clients in
               Canada, the United States, the United Kingdom, Australia, and beyond.
             </p>
-            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,black_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--support)_25%,black_10%)]">
+            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,var(--muted)_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--support)_65%,var(--forest)_35%)]">
               Interactive map integration coming soon.
             </div>
           </div>
