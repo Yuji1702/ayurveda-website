@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ayurveda Wellness Website
 
-## Getting Started
+## Overview
+This repository powers the marketing site for **Dr. Zahida Sadaf**, an Ayurvedic–Unani physician who delivers holistic, root-cause healing plans. The site highlights her principles, global consultation process, regional pricing, and natural therapies such as Hijama, leech therapy, yoga, and personalized herbal formulations. It is built with the Next.js App Router so each route renders quickly, remains SEO friendly, and is ready for deployment on any Node.js host.
 
-First, run the development server:
+## Tech stack
+- [Next.js 14](https://nextjs.org/docs) with the App Router and file-system based routing
+- [TypeScript](https://www.typescriptlang.org/) for static typing and editor tooling
+- [Tailwind CSS v4](https://tailwindcss.com/) utilities plus a light layer of custom globals for forms and typography
+- SVG illustration assets served from `public/`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project structure
+| Path | Purpose |
+| --- | --- |
+| `app/layout.tsx` | Configures global metadata, injects structured data for search engines, renders the shared header/footer, and exposes the skip link for accessibility. |
+| `app/page.tsx` | Home page hero with “Your Online Health Consultant” messaging, principles, services, and testimonials tailored to Dr. Sadaf’s practice. |
+| `app/about/page.tsx` | Detailed biography describing qualifications, healing philosophy, and therapy modalities with supporting imagery. |
+| `app/services/page.tsx` | Card grid covering PCOS/PCOD, thyroid, diabetes, hormonal balance, skin wellness, and detox programs, each linked to booking. |
+| `app/consultation/page.tsx` | Step-by-step booking flow, regional pricing table, WhatsApp link, and an intake form that gathers name, contact details, location, and health concerns. |
+| `app/contact/page.tsx` | Contact options, social links, and a general inquiry form for collaborations or follow-up questions. |
+| `app/globals.css` | Sets theme tokens, form styles, selection colors, and responsive section padding shared by every page. |
+| `components/site-header.tsx` | Client component that renders the brand identity, accessible desktop navigation, and a mobile menu toggle. |
+| `components/site-footer.tsx` | Global footer with quick links, contact information, and the core brand statement. |
+| `public/dr-zahida-sadaf-portrait.svg` | Accessible illustration used on multiple pages to reinforce the holistic brand. |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How the site works
+- **Routing overview** – The App Router maps `/` to the homepage hero and testimonials, `/about` to Dr. Sadaf’s biography, `/services` to the treatment cards, and `/consultation` to the booking workflow with pricing and intake form. `/contact` delivers a direct outreach form alongside quick links, ensuring every visitor can choose a preferred channel.
+- **Component responsibilities** – The hero, principle list, services grid, testimonials, and footer live inside composable sections so the same branding system is reused across routes. `SiteHeader` keeps navigation and CTAs accessible, while the consultation and contact forms share consistent label, input, and `btn-primary` button styling defined in `globals.css`.
+- **Data + UI flow** – Content arrays inside each page (principles, services, steps, testimonials, pricing) drive the UI by mapping over structured data to render cards, list items, and tables. Calls-to-action route visitors into the consultation journey, where the process explainer, regional pricing table, WhatsApp link, and intake form feed into Dr. Sadaf’s personalized care workflow.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Helpful scripts
+Run commands from the project root:
+- `npm run dev` – Starts a hot-reloading dev server at [http://localhost:3000](http://localhost:3000).
+- `npm run build` – Generates an optimized production build.
+- `npm run start` – Serves the last production build locally for smoke testing.
+- `npm run lint` – Lints the entire codebase using the shared ESLint configuration.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Getting started
+1. Install dependencies with `npm install`.
+2. Launch the dev server using `npm run dev`.
+3. Edit files under `app/` or `components/`. Every major section includes concise comments so newcomers can navigate quickly.
+4. Before deploying, run `npm run lint` and `npm run build` to verify code quality and bundle health.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Accessibility & SEO notes
+- Every page defines page-specific `<title>` and `<meta name="description">` entries via Next.js metadata exports.
+- The root layout adds [Schema.org Physician](https://schema.org/Physician) JSON-LD to improve search discoverability.
+- Forms use semantic `<label>` elements, required states, and autocomplete hints for better usability.
+- Responsive navigation supports keyboard focus, skip links, and a mobile toggle so the experience remains inclusive on all devices.
