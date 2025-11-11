@@ -69,6 +69,24 @@ const testimonials = [
   },
 ];
 
+const trustBadges = [
+  {
+    title: "Government Registered",
+    description: "Ayush-certified Unani practice",
+    icon: "🏛️",
+  },
+  {
+    title: "Organic Herbal Pharmacy",
+    description: "Hand-prepared medicines",
+    icon: "🌿",
+  },
+  {
+    title: "Global Telehealth",
+    description: "HIPAA-compliant follow-ups",
+    icon: "🌐",
+  },
+];
+
 /**
  * Home page presenting key value propositions, services, and social proof for quick orientation.
  */
@@ -98,7 +116,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/about"
-              className="rounded-full bg-white/85 px-6 py-3 text-sm font-semibold text-[color:var(--foreground)] shadow transition hover:bg-[color:color-mix(in_srgb,white_90%,var(--accent-soft)_10%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
+              className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_85%,var(--muted)_15%)] shadow transition hover:bg-[color:color-mix(in_srgb,white_88%,var(--accent-soft)_12%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
             >
               Meet Dr. Sadaf
             </Link>
@@ -117,12 +135,31 @@ export default function HomePage() {
               <dd className="mt-2 text-2xl font-semibold text-[color:var(--foreground)]">Consults worldwide</dd>
             </div>
           </dl>
+          <ul className="mt-10 grid gap-5 sm:grid-cols-3">
+            {trustBadges.map((badge) => (
+              <li
+                key={badge.title}
+                className="flex items-center gap-3 rounded-3xl bg-white/85 p-4 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)]"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex h-14 w-14 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent-soft)_65%,white_35%)] text-2xl"
+                >
+                  {badge.icon}
+                </span>
+                <div className="text-sm">
+                  <p className="font-semibold text-[color:var(--foreground)]">{badge.title}</p>
+                  <p className="text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">{badge.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(45,107,87,0.32)] via-[color:rgba(166,124,82,0.2)] to-[color:rgba(244,196,48,0.26)] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(30,63,58,0.35)] via-[color:rgba(159,199,192,0.2)] to-[color:rgba(90,166,165,0.28)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
-            alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
+            alt="Portrait of Dr. Zahida Sadaf offering compassionate online consultation"
             width={520}
             height={520}
             className="w-full max-w-xs drop-shadow-xl sm:max-w-sm"
@@ -169,10 +206,10 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {services.map((service) => (
+            {services.map((service) => (
               <article
                 key={service.title}
-                className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] transition hover:-translate-y-1 hover:shadow-lg"
+                className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-[color:var(--foreground)]">{service.title}</h3>
@@ -181,7 +218,7 @@ export default function HomePage() {
                 <div className="mt-6">
                   <Link
                     href="/consultation"
-                    className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,var(--muted)_25%)] underline-offset-4 hover:underline"
+                    className="text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_82%,var(--earth)_18%)] underline-offset-4 hover:underline"
                     aria-label={`Book a consultation to learn more about ${service.title}`}
                   >
                     Book your personalized plan
@@ -193,31 +230,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="testimonials">
-          <div className="rounded-3xl surface-card motif-leaf px-8 py-12 shadow-lg">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 id="testimonials" className="text-3xl font-semibold">
-                Stories of renewed balance
-              </h2>
-              <p className="mt-3">
-              Real people. Real results. Personalized care that feels like family.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {testimonials.map((testimonial) => (
-                <figure
-                  key={testimonial.author}
-                  className="flex h-full flex-col justify-between rounded-3xl surface-overlay p-6 text-left shadow-sm"
-                >
-                  <blockquote className="text-sm leading-6">
-                    “{testimonial.quote}”
-                  </blockquote>
-                  <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-[color:color-mix(in_srgb,var(--foreground)_60%,var(--muted)_40%)]">
-                    {testimonial.author}
-                  </figcaption>
-                </figure>
-              ))}
-          </div>
+      <section aria-labelledby="testimonials" className="surface-section motif-leaf px-8 py-12 shadow-lg">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 id="testimonials" className="text-3xl font-semibold text-[color:var(--foreground)]">
+            Stories of renewed balance
+          </h2>
+          <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
+            Real clients share how compassionate Ayurvedic-Unani care restored their energy and confidence.
+          </p>
+          {/* Larger screens display principles in three balanced columns for readability */}
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {principles.map((principle) => (
+              <li
+                key={principle}
+                className="flex items-start gap-3 rounded-2xl bg-[color:color-mix(in_srgb,var(--accent-soft)_40%,white_60%)] p-4 text-sm text-[color:var(--foreground)]"
+              >
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-[color:var(--accent)]" aria-hidden="true" />
+                <span>{principle}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {testimonials.map((testimonial) => (
+            <figure
+              key={testimonial.author}
+              className="flex h-full flex-col justify-between rounded-3xl bg-white/92 p-6 text-left shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)]"
+            >
+              <blockquote className="text-sm leading-6 text-[color:color-mix(in_srgb,var(--foreground)_75%,var(--muted)_25%)]">
+                “{testimonial.quote}”
+              </blockquote>
+              <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
+                {testimonial.author}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/consultation"
+            className="btn-primary text-sm"
+          >
+            Book your healing journey
+          </Link>
+          <Link
+            href="/about"
+            className="rounded-full border border-[color:color-mix(in_srgb,var(--accent)_45%,var(--earth)_55%)] px-6 py-3 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_80%,var(--muted)_20%)] shadow-sm transition hover:bg-[color:color-mix(in_srgb,var(--accent-soft)_25%,white_75%)]"
+          >
+            Learn about our methods
+          </Link>
         </div>
       </section>
     </div>

@@ -8,6 +8,27 @@ export const metadata: Metadata = {
     "Learn about Dr. Zahida Sadaf's Ayurvedic-Unani qualifications, holistic treatment philosophy, and global online consultation support.",
 };
 
+const doctors = [
+  {
+    name: "Dr. Zahida Sadaf",
+    role: "Ayurvedic-Unani Physician",
+    bio: "Founder and lead consultant specialising in hormonal balance, metabolic health, and integrative detox therapies.",
+    initials: "ZS",
+  },
+  {
+    name: "Dr. Salman Hakim",
+    role: "Clinical Unani Specialist",
+    bio: "Designs personalised herbal formulations and supervises hijama and leech therapy protocols for chronic pain relief.",
+    initials: "SH",
+  },
+  {
+    name: "Dr. Farrah Noor",
+    role: "Holistic Nutrition Expert",
+    bio: "Guides therapeutic meal plans, gut-healing routines, and mindfulness coaching for sustained lifestyle transformation.",
+    initials: "FN",
+  },
+];
+
 /**
  * About page describing Dr. Sadaf's background, healing philosophy, and therapeutic methods.
  */
@@ -54,7 +75,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(45,107,87,0.28)] via-[color:rgba(166,124,82,0.18)] to-[color:rgba(244,196,48,0.22)] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(30,63,58,0.32)] via-[color:rgba(159,199,192,0.2)] to-[color:rgba(90,166,165,0.24)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Portrait illustration of Dr. Zahida Sadaf smiling confidently"
@@ -99,6 +120,43 @@ export default function AboutPage() {
               Australia through secure phone or video sessions.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section className="mt-12 surface-section p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] sm:p-10">
+        <h2 className="text-3xl font-semibold text-[color:var(--foreground)]">Meet our doctors</h2>
+        <p className="mt-4 max-w-3xl text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
+          Our multidisciplinary team blends Unani, Ayurveda, and naturopathic insight so every client receives attentive, culturally rooted guidance.
+        </p>
+        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {doctors.map((doctor) => (
+            <article
+              key={doctor.name}
+              className="flex h-full flex-col gap-4 rounded-3xl bg-white/92 p-6 text-center shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)]"
+            >
+              <div
+                className="relative mx-auto flex h-40 w-40 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent-soft)_55%,white_45%)] shadow-inner"
+                aria-hidden="true"
+              >
+                <span className="text-4xl font-semibold text-[color:color-mix(in_srgb,var(--foreground)_85%,black_15%)]">
+                  {doctor.initials}
+                </span>
+              </div>
+              <span className="sr-only">Stylised avatar placeholder for {doctor.name}</span>
+              <div>
+                <h3 className="text-xl font-semibold text-[color:var(--foreground)]">{doctor.name}</h3>
+                <p className="text-sm font-medium text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">{doctor.role}</p>
+              </div>
+              <p className="text-sm text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">{doctor.bio}</p>
+              <Link
+                href="/consultation"
+                className="btn-primary text-sm"
+                aria-label={`Book a consultation with ${doctor.name}`}
+              >
+                Book with {doctor.name.split(" ")[1]}
+              </Link>
+            </article>
+          ))}
         </div>
       </section>
     </div>

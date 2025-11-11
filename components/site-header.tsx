@@ -29,14 +29,14 @@ export function SiteHeader() {
   };
 
   const linkBaseClasses =
-    "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:color-mix(in_srgb,var(--accent)_25%,white_75%)]";
+    "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:color-mix(in_srgb,var(--accent)_35%,white_65%)]";
   const navClassName = [
-    "w-full flex-col gap-4 rounded-3xl bg-[color:color-mix(in_srgb,var(--forest)_85%,black_15%)] px-4 py-4 shadow-lg md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0 md:shadow-none",
+    "w-full flex-col gap-4 rounded-3xl bg-[color:color-mix(in_srgb,var(--forest)_82%,black_18%)] px-4 py-4 shadow-lg md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0 md:shadow-none",
     isMenuOpen ? "flex" : "hidden md:flex",
   ].join(" ");
 
   return (
-    <header className="bg-[linear-gradient(135deg,rgba(45,107,87,0.95)0%,rgba(166,124,82,0.82)55%,rgba(45,107,87,0.95)100%)] text-white shadow-sm">
+    <header className="bg-[linear-gradient(135deg,rgba(30,63,58,0.96)0%,rgba(73,123,120,0.85)48%,rgba(30,63,58,0.96)100%)] text-white shadow-sm">
       <div className="page-shell py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex w-full items-center justify-between gap-3 md:w-auto">
@@ -50,7 +50,7 @@ export function SiteHeader() {
             </div>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.35)] text-white transition hover:bg-[color:color-mix(in_srgb,var(--forest)_85%,black_15%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.28)] text-white transition hover:bg-[color:color-mix(in_srgb,var(--forest)_80%,black_20%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
               aria-label="Toggle navigation menu"
               aria-expanded={isMenuOpen}
               aria-controls="primary-navigation"
@@ -82,8 +82,8 @@ export function SiteHeader() {
                       aria-current={active ? "page" : undefined}
                       className={`${linkBaseClasses} ${
                         active
-                          ? "bg-[color:color-mix(in_srgb,var(--accent)_78%,var(--earth)_22%)]"
-                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_62%,var(--forest)_38%)]"
+                          ? "bg-[color:color-mix(in_srgb,var(--accent)_82%,var(--earth)_18%)]"
+                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_65%,var(--earth)_35%)]"
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >

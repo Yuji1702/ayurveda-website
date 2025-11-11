@@ -60,7 +60,7 @@ export default function ServicesPage() {
           {serviceCards.map((card) => (
             <article
               key={card.title}
-              className="surface-card flex h-full flex-col justify-between p-6 ring-1 ring-[color:color-mix(in_srgb,var(--earth)_35%,white_65%)] transition hover:-translate-y-1 hover:shadow-xl"
+              className="surface-card flex h-full flex-col justify-between p-6 ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div>
                 <h2 className="text-2xl font-semibold text-[color:var(--foreground)]">{card.title}</h2>
@@ -69,7 +69,7 @@ export default function ServicesPage() {
               <div className="mt-6">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_75%,var(--muted)_25%)] underline-offset-4 hover:underline"
+                  className="inline-flex items-center text-sm font-semibold text-[color:color-mix(in_srgb,var(--accent)_82%,var(--earth)_18%)] underline-offset-4 hover:underline"
                   aria-label={`Schedule a consultation about ${card.title}`}
                 >
                   Book consultation
@@ -80,6 +80,17 @@ export default function ServicesPage() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
+          <Link href="/consultation" className="btn-primary text-sm">
+            Book your personalised plan
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-full border border-[color:color-mix(in_srgb,var(--accent)_45%,var(--earth)_55%)] px-6 py-3 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_80%,var(--muted)_20%)] shadow-sm transition hover:bg-[color:color-mix(in_srgb,var(--accent-soft)_25%,white_75%)]"
+          >
+            Chat with our care team
+          </Link>
         </div>
       </section>
     </div>

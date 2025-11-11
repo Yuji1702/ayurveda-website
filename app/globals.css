@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary olive green evokes rejuvenating botanicals */
-  --forest: #2d6b57;
-  /* Soft olive supports cards and navigation backgrounds */
-  --sage: #6b9362;
-  /* Warm brown grounds dividers, borders, and typographic accents */
-  --earth: #a67c52;
-  /* Muted gold reserved for call-to-action emphasis */
-  --rose: #f4c430;
-  /* Gentle golden highlight for focus rings and subtle washes */
-  --rose-light: color-mix(in srgb, var(--rose) 35%, white 65%);
-  /* Cream backdrop maintains a spa-like calm */
-  --rose-pale: #f9f6f2;
+  /* Deep evergreen for strong text contrast and brand anchors */
+  --forest: #1e3f3a;
+  /* Misty aqua wash softens panels and navigation shells */
+  --sage: #9fc7c0;
+  /* Grounding blue-green adds depth to dividers and overlays */
+  --earth: #497b78;
+  /* Serene teal accent energises calls-to-action and links */
+  --rose: #5aa6a5;
+  /* Whisper-soft highlight for focus rings and badges */
+  --rose-light: color-mix(in srgb, var(--rose) 32%, white 68%);
+  /* Calm cream backdrop keeps reading environments bright yet warm */
+  --rose-pale: #f4f9f6;
   --background: var(--rose-pale);
   --foreground: #1f1f1f;
-  --muted: #5a5a5a;
+  --muted: #4d6b68;
   --accent: var(--rose);
   --accent-soft: color-mix(in srgb, var(--rose) 20%, white 80%);
-  --support: color-mix(in srgb, var(--sage) 65%, white 35%);
-  --highlight: color-mix(in srgb, var(--rose) 15%, white 85%);
+  --support: color-mix(in srgb, var(--sage) 70%, white 30%);
+  --highlight: color-mix(in srgb, var(--rose) 18%, white 82%);
 }
 
 @theme inline {
@@ -33,14 +33,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --background: color-mix(in srgb, var(--forest) 12%, black 88%);
+  --background: color-mix(in srgb, var(--forest) 16%, black 84%);
   --foreground: color-mix(in srgb, white 92%, var(--forest) 8%);
   --muted: color-mix(in srgb, var(--earth) 55%, white 45%);
-  --accent: color-mix(in srgb, var(--rose) 75%, black 25%);
-  --accent-soft: color-mix(in srgb, var(--rose-light) 70%, black 30%);
-  --support: color-mix(in srgb, var(--forest) 55%, black 45%);
-  --highlight: color-mix(in srgb, var(--rose) 25%, white 75%);
-  }
+  --accent: color-mix(in srgb, var(--rose) 78%, black 22%);
+  --accent-soft: color-mix(in srgb, var(--rose-light) 72%, black 28%);
+  --support: color-mix(in srgb, var(--forest) 60%, black 40%);
+  --highlight: color-mix(in srgb, var(--rose) 28%, white 72%);
+}
+}
+
+html[data-theme="test"] {
+  --background: #fdf9f1;
+  --foreground: #274f40;
+  --muted: #4e5c54;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html[data-theme="test"] {
@@ -63,12 +75,12 @@ body {
 }
 
 a {
-  color: color-mix(in srgb, var(--accent) 65%, var(--earth) 35%);
+  color: color-mix(in srgb, var(--accent) 78%, var(--forest) 22%);
   text-decoration: none;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent) 55%, black 45%);
+  color: color-mix(in srgb, var(--accent) 60%, black 40%);
 }
 
 img,
@@ -142,37 +154,37 @@ section {
 }
 
 .surface-section {
-  /* Cream wash with a whisper of olive for grounded calm */
-  background: color-mix(in srgb, var(--rose-pale) 88%, var(--sage) 12%);
+  /* Cream wash infused with seafoam undertones for serenity */
+  background: color-mix(in srgb, var(--rose-pale) 85%, var(--sage) 15%);
   border-radius: 1.75rem;
 }
 
 .surface-card {
-  /* Gentle card tone anchored by the soft olive palette */
-  background: color-mix(in srgb, var(--support) 92%, white 8%);
+  /* Airy card tone balanced with a hint of aqua depth */
+  background: color-mix(in srgb, var(--support) 95%, white 5%);
   border-radius: 1.5rem;
-  box-shadow: 0 18px 36px -24px rgba(21, 54, 41, 0.45);
+  box-shadow: 0 18px 36px -24px rgba(30, 63, 58, 0.48);
 }
 
 .surface-card * {
-  color: color-mix(in srgb, var(--foreground) 90%, black 10%) !important;
+  color: color-mix(in srgb, var(--foreground) 92%, black 8%) !important;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 70%, var(--earth) 30%) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 65%, var(--earth) 35%) 100%);
   color: white;
   border-radius: 9999px;
-  padding: 0.75rem 1.6rem;
+  padding: 0.8rem 1.7rem;
   font-weight: 700;
-  box-shadow: 0 18px 24px -18px rgba(166, 124, 82, 0.55);
+  box-shadow: 0 18px 26px -16px rgba(30, 63, 58, 0.45);
 }
 
 .btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 60%, var(--earth) 40%);
+  background: color-mix(in srgb, var(--accent) 55%, var(--earth) 45%);
 }
 
 .surface-overlay {
-  background: color-mix(in srgb, var(--background) 85%, rgba(47, 62, 47, 0.15) 15%);
+  background: color-mix(in srgb, var(--background) 88%, rgba(30, 63, 58, 0.18) 12%);
 }
 
 /* Nature-inspired motif overlays for hero and testimonial sections */
@@ -187,7 +199,7 @@ section {
       color-mix(in srgb, var(--accent) 18%, white 82%) 0%,
       transparent 50%
     ),
-    linear-gradient(160deg, rgba(109, 147, 98, 0.18) 0%, rgba(166, 124, 82, 0.12) 55%, rgba(244, 196, 48, 0.18) 100%);
+    linear-gradient(160deg, rgba(159, 199, 192, 0.22) 0%, rgba(73, 123, 120, 0.18) 55%, rgba(90, 166, 165, 0.22) 100%);
   background-blend-mode: soft-light, normal;
 }
 
@@ -204,9 +216,9 @@ section {
   background-image: linear-gradient(
     to right,
     transparent 0%,
-    color-mix(in srgb, var(--earth) 25%, white 75%) 35%,
-    color-mix(in srgb, var(--accent) 15%, white 85%) 50%,
-    color-mix(in srgb, var(--earth) 25%, white 75%) 65%,
+    color-mix(in srgb, var(--earth) 35%, white 65%) 35%,
+    color-mix(in srgb, var(--accent) 22%, white 78%) 50%,
+    color-mix(in srgb, var(--earth) 35%, white 65%) 65%,
     transparent 100%
   );
   opacity: 0.55;
@@ -214,5 +226,10 @@ section {
 }
 
 .soft-shadow {
-  box-shadow: 0 24px 48px -30px rgba(29, 79, 60, 0.55);
+  box-shadow: 0 24px 48px -28px rgba(30, 63, 58, 0.52);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, white 45%);
+  outline-offset: 3px;
 }

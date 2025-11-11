@@ -21,7 +21,7 @@ export default function ContactPage() {
             responds within one business day and provides compassionate guidance throughout
             your healing journey.
           </p>
-          <div className="surface-card p-6 ring-1 ring-[color:color-mix(in_srgb,var(--earth)_35%,white_65%)] sm:p-8">
+          <div className="surface-card p-6 ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] sm:p-8">
             <h2 className="text-xl font-semibold text-[color:var(--foreground)]">Contact details</h2>
             <ul className="mt-4 space-y-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
               <li>
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 Book consultation
               </Link>
               <a
-                className="rounded-full bg-white px-4 py-2 text-[color:var(--foreground)] shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] transition hover:bg-[color:color-mix(in_srgb,white_90%,var(--accent-soft)_10%)]"
+                className="rounded-full bg-white px-4 py-2 text-[color:color-mix(in_srgb,var(--foreground)_85%,var(--muted)_15%)] shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] transition hover:bg-[color:color-mix(in_srgb,white_88%,var(--accent-soft)_12%)]"
                 href="https://wa.me/917667265892"
                 target="_blank"
                 rel="noreferrer"
@@ -57,7 +57,7 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-          <div className="surface-section p-6 shadow-inner ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-8">
+          <div className="surface-section p-6 shadow-inner ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] sm:p-8">
             <h2 className="text-xl font-semibold text-[color:var(--foreground)]">Connect on social media</h2>
             <ul className="mt-4 space-y-2 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
               <li>
@@ -75,8 +75,8 @@ export default function ContactPage() {
         </div>
         {/* Desktop breakpoint keeps the inquiry form visually balanced beside support cards */}
         <div className="rounded-3xl surface-card motif-leaf p-8 shadow-lg sm:p-10">
-          <h2 className="text-2xl font-semibold">Send us a message</h2>
-          <p className="mt-3">
+          <h2 className="text-2xl font-semibold text-[color:var(--foreground)]">Send us a message</h2>
+          <p className="mt-3 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Share your health goals, preferred consultation mode, and any urgent questions. We
             will follow up with tailored next steps.
           </p>
@@ -132,13 +132,13 @@ export default function ContactPage() {
               </button>
             </div>
           </form>
-            <div className="mt-8 rounded-2xl surface-overlay p-5 text-sm shadow-inner">
+          <div className="mt-8 rounded-2xl surface-overlay p-5 text-sm shadow-inner">
             <h3 className="font-semibold">Clinic location</h3>
             <p className="mt-2 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
               Hyderabad, Telangana, India. Virtual consultations are available for clients in
               Canada, the United States, the United Kingdom, Australia, and beyond.
             </p>
-            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,var(--muted)_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--sage)_55%,var(--earth)_45%)]">
+            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,var(--muted)_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--support)_45%,white_55%)]">
               Interactive map integration coming soon.
             </div>
           </div>

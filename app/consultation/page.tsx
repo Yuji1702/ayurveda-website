@@ -76,9 +76,9 @@ export default function ConsultationPage() {
           {steps.map((step, index) => (
             <li
               key={step.title}
-              className="flex flex-col gap-3 rounded-3xl bg-[color:color-mix(in_srgb,var(--sage)_28%,white_72%)] p-6 shadow-sm"
+              className="flex flex-col gap-3 rounded-3xl bg-[color:color-mix(in_srgb,var(--support)_45%,white_55%)] p-6 shadow-sm"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_75%,var(--earth)_25%)] text-sm font-semibold text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_82%,var(--earth)_18%)] text-sm font-semibold text-white">
                 {index + 1}
               </span>
               <h3 className="text-lg font-semibold text-[color:var(--foreground)]">{step.title}</h3>
@@ -86,16 +86,32 @@ export default function ConsultationPage() {
             </li>
           ))}
         </ol>
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="https://wa.me/917667265892"
+            className="btn-primary text-sm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chat on WhatsApp now
+          </a>
+          <a
+            href="mailto:care@drzahidasadaf.com"
+            className="rounded-full border border-[color:color-mix(in_srgb,var(--accent)_45%,var(--earth)_55%)] px-6 py-3 text-sm font-semibold text-[color:color-mix(in_srgb,var(--foreground)_80%,var(--muted)_20%)] shadow-sm transition hover:bg-[color:color-mix(in_srgb,var(--accent-soft)_25%,white_75%)]"
+          >
+            Email our care desk
+          </a>
+        </div>
       </section>
 
       <section className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] lg:items-start">
-        <div className="surface-section soft-shadow p-8 ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
+        <div className="surface-section soft-shadow p-8 ring-1 ring-[color:color-mix(in_srgb,var(--support)_28%,white_72%)] sm:p-10">
           <h2 className="text-3xl font-semibold text-[color:var(--foreground)]">Consultation investment</h2>
           <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Choose the currency that matches your location. Membership bundles with additional
             follow-ups and herbal refills are available on request.
           </p>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-[color:color-mix(in_srgb,var(--support)_35%,white_65%)]">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-[color:color-mix(in_srgb,var(--support)_32%,white_68%)]">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-[color:color-mix(in_srgb,var(--support)_25%,white_75%)] text-sm">
                 <thead className="bg-[color:color-mix(in_srgb,var(--forest)_90%,black_10%)] text-left text-xs font-semibold uppercase tracking-wide text-white">
@@ -134,8 +150,8 @@ export default function ConsultationPage() {
           </div>
         </div>
         <div className="rounded-3xl surface-card motif-leaf p-8 shadow-lg sm:p-10">
-          <h2 className="text-3xl font-semibold">Share your health story</h2>
-          <p className="mt-3">
+          <h2 className="text-3xl font-semibold text-[color:var(--foreground)]">Share your health story</h2>
+          <p className="mt-3 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Complete the form and we will respond within one business day with next steps.
           </p>
           <form className="mt-6 space-y-5" action="#" method="post">
