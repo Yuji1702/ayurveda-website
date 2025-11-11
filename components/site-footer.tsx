@@ -92,7 +92,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-[color:rgba(255,255,255,0.2)] bg-[color:color-mix(in_srgb,var(--earth)_88%,black_12%)]">
+      <div className="border-t border-[color:color-mix(in_srgb,var(--accent)_35%,white_65%)] bg-[color:color-mix(in_srgb,var(--forest)_90%,black_10%)]">
         <p className="page-shell py-4 text-xs text-[color:rgba(255,255,255,0.7)]">
           Healing is a sacred service. Every consultation is delivered with compassion,
           integrity, and respect for your unique wellness journey.

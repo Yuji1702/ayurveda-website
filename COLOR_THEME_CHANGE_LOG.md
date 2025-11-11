@@ -1,14 +1,16 @@
-# Style B Color Theme Update
+# Ayurvedic Harmony Palette Update
 
 ## Palette overview
-- `--foreground` (`#1F1F1F` – Charcoal): Primary text tone, ensuring crisp copy across cream backdrops.
-- `--background` (`#FAF6EF` – Cream): Base surface for pages and section backdrops.
-- `--accent` (`#C96F48` – Terracotta): Call-to-action buttons, interactive highlights, and navigation states.
-- `--accent-soft` (`#C8A25F` – Muted Gold): Hover states, outlines, and gentle emphasis fills.
-- `--support` (`color-mix(var(--sage) 75%, white 25%)` – Herbal Mist): Card surfaces, testimonial panels, and pricing table frames.
+- `--foreground` (`#1F1F1F` – Charcoal): Primary text tone, keeping content sharp on cream and white foundations.
+- `--background` (`#FFFFFF` – White): Base surface that supports clarity and breathing room across sections.
+- `--rose` (`#F4C430` – Warm Gold): Reserved for calls-to-action, interactive highlights, and celebratory accents.
+- `--accent-soft` (`color-mix(--rose 25%, white 75%)` – Soft Gilding): Hover states, outlines, badges, and gentle emphasis fills.
+- `--support` (`color-mix(--sage 28%, white 72%)` – Earthy Mist): Card surfaces, testimonial panels, and pricing table frames.
+- `--forest` (`#2D6B57` – Deep Green): Header/footer anchor, navigation chrome, and gradient roots.
+- `--sage` (`#964B00` – Soft Brown): Stabilizing borders, dividers, and warm neutral touches.
 
-## Why Style B fits holistic wellness
-The herbal green, muted gold, and terracotta trio mirrors Ayurvedic apothecaries and luxury retreats—earthy yet refined. Terracotta CTAs signal attentive care, while gold glows evoke nourishing oils and sunlit rituals. Charcoal type on cream ensures legibility for all ages.
+## Why this palette fits holistic wellness
+Deep herbal green evokes vitality and nature, soft brown conveys grounded stability, and luminous gold reflects traditional Ayurvedic luxury. The trio keeps the interface warm and trustworthy while white backdrops provide clarity. Charcoal body text protects readability for visitors seeking detailed guidance.
 
 ## Adjusting theme values later
 - Update the CSS variables in `app/globals.css` to tweak the core palette. Every component references these tokens rather than hard-coded colors.
@@ -16,10 +18,10 @@ The herbal green, muted gold, and terracotta trio mirrors Ayurvedic apothecaries
 - Section and card backgrounds inherit from `.surface-section` and `.surface-card`. Modify those classes once to recolor all large panels and testimonials.
 
 ## Components refreshed in this pass
-- `app/layout.tsx` – Body, focus, and global gradient rely on the new variables.
-- `components/site-header.tsx` & `components/site-footer.tsx` – Navigation, mobile menu, and footer surfaces aligned with deep sage and rose CTAs.
-- `app/page.tsx`, `app/about/page.tsx`, `app/services/page.tsx`, `app/consultation/page.tsx`, `app/contact/page.tsx` – Swapped emerald utilities for herbal gradients, terracotta CTAs, and cream panels.
-- `app/globals.css` – Introduced Style B tokens plus `.btn-primary`, `.surface-section`, and `.surface-card` helpers for consistent application.
+- `app/layout.tsx` – Body gradient now drifts from herbal green to warm gold for a spa-inspired shell.
+- `components/site-header.tsx` & `components/site-footer.tsx` – Navigation chrome and footer accents anchor to deep forest with gold edge details.
+- `app/page.tsx`, `app/about/page.tsx`, `app/services/page.tsx`, `app/consultation/page.tsx`, `app/contact/page.tsx` – Each view leans on the new green, brown, and gold accents without structural changes.
+- `app/globals.css` – Palette tokens, surface helpers, and button styling align with the Ayurvedic harmony scheme.
 
 ## Contrast refinement sprint
 - Tuned `.btn-primary` and default link colors toward deeper rose mixes so white text and pale backgrounds now exceed 4.5:1 contrast.

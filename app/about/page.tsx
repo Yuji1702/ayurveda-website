@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-[color:rgba(45,107,87,0.24)] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-[color:rgba(45,107,87,0.22)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Portrait illustration of Dr. Zahida Sadaf smiling confidently"
