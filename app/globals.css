@@ -55,6 +55,18 @@ html[data-theme="test"] {
   box-sizing: border-box;
 }
 
+html[data-theme="test"] {
+  --background: #fdf9f1;
+  --foreground: #274f40;
+  --muted: #4e5c54;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

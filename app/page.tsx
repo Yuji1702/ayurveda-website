@@ -238,6 +238,18 @@ export default function HomePage() {
           <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Real clients share how compassionate Ayurvedic-Unani care restored their energy and confidence.
           </p>
+          {/* Larger screens display principles in three balanced columns for readability */}
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {principles.map((principle) => (
+              <li
+                key={principle}
+                className="flex items-start gap-3 rounded-2xl bg-[color:color-mix(in_srgb,var(--accent-soft)_40%,white_60%)] p-4 text-sm text-[color:var(--foreground)]"
+              >
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-[color:var(--accent)]" aria-hidden="true" />
+                <span>{principle}</span>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((testimonial) => (
