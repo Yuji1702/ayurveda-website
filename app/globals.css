@@ -1,26 +1,223 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Deep evergreen for strong text contrast and brand anchors */
+  --forest: #1e3f3a;
+  /* Misty aqua wash softens panels and navigation shells */
+  --sage: #9fc7c0;
+  /* Grounding blue-green adds depth to dividers and overlays */
+  --earth: #497b78;
+  /* Serene teal accent energises calls-to-action and links */
+  --rose: #5aa6a5;
+  /* Whisper-soft highlight for focus rings and badges */
+  --rose-light: color-mix(in srgb, var(--rose) 32%, white 68%);
+  /* Calm cream backdrop keeps reading environments bright yet warm */
+  --rose-pale: #f4f9f6;
+  --background: var(--rose-pale);
+  --foreground: #1f1f1f;
+  --muted: #4d6b68;
+  --accent: var(--rose);
+  --accent-soft: color-mix(in srgb, var(--rose) 20%, white 80%);
+  --support: color-mix(in srgb, var(--sage) 70%, white 30%);
+  --highlight: color-mix(in srgb, var(--rose) 18%, white 82%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Nunito", "Quicksand", "Segoe UI", system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: color-mix(in srgb, var(--forest) 16%, black 84%);
+  --foreground: color-mix(in srgb, white 92%, var(--forest) 8%);
+  --muted: color-mix(in srgb, var(--earth) 55%, white 45%);
+  --accent: color-mix(in srgb, var(--rose) 78%, black 22%);
+  --accent-soft: color-mix(in srgb, var(--rose-light) 72%, black 28%);
+  --support: color-mix(in srgb, var(--forest) 60%, black 40%);
+  --highlight: color-mix(in srgb, var(--rose) 28%, white 72%);
+}
+}
+
+html[data-theme="test"] {
+  --background: #fdf9f1;
+  --foreground: #274f40;
+  --muted: #4e5c54;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+a {
+  color: color-mix(in srgb, var(--accent) 78%, var(--forest) 22%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent) 60%, black 40%);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+::selection {
+  background: var(--highlight);
+  color: #1a2e23;
+}
+
+label {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--earth) 20%, white 80%);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--forest) 75%, white 25%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+section {
+  padding-block: clamp(3rem, 6vw, 4rem);
+}
+
+/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
+@media (max-width: 40em) {
+  section {
+    padding-block: 2.75rem;
+  }
+}
+
+/* Fluid content wrapper that centers layouts and provides adaptive gutters */
+.page-shell {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+.surface-section {
+  /* Cream wash infused with seafoam undertones for serenity */
+  background: color-mix(in srgb, var(--rose-pale) 85%, var(--sage) 15%);
+  border-radius: 1.75rem;
+}
+
+.surface-card {
+  /* Airy card tone balanced with a hint of aqua depth */
+  background: color-mix(in srgb, var(--support) 95%, white 5%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 36px -24px rgba(30, 63, 58, 0.48);
+}
+
+.surface-card * {
+  color: color-mix(in srgb, var(--foreground) 92%, black 8%) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 65%, var(--earth) 35%) 100%);
+  color: white;
+  border-radius: 9999px;
+  padding: 0.8rem 1.7rem;
+  font-weight: 700;
+  box-shadow: 0 18px 26px -16px rgba(30, 63, 58, 0.45);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent) 55%, var(--earth) 45%);
+}
+
+.surface-overlay {
+  background: color-mix(in srgb, var(--background) 88%, rgba(30, 63, 58, 0.18) 12%);
+}
+
+/* Nature-inspired motif overlays for hero and testimonial sections */
+.motif-leaf {
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      color-mix(in srgb, var(--sage) 35%, white 65%) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      color-mix(in srgb, var(--accent) 18%, white 82%) 0%,
+      transparent 50%
+    ),
+    linear-gradient(160deg, rgba(159, 199, 192, 0.22) 0%, rgba(73, 123, 120, 0.18) 55%, rgba(90, 166, 165, 0.22) 100%);
+  background-blend-mode: soft-light, normal;
+}
+
+.motif-divider {
+  position: relative;
+}
+
+.motif-divider::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -2.5rem;
+  height: 3.5rem;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    color-mix(in srgb, var(--earth) 35%, white 65%) 35%,
+    color-mix(in srgb, var(--accent) 22%, white 78%) 50%,
+    color-mix(in srgb, var(--earth) 35%, white 65%) 65%,
+    transparent 100%
+  );
+  opacity: 0.55;
+  filter: blur(12px);
+}
+
+.soft-shadow {
+  box-shadow: 0 24px 48px -28px rgba(30, 63, 58, 0.52);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, white 45%);
+  outline-offset: 3px;
 }
