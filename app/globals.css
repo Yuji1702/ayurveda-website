@@ -1,26 +1,168 @@
 @import "tailwindcss";
 
 :root {
+  /* Deep green anchors the brand with a calm, botanical base */
+  --forest: #2d6b57;
+  /* Soft brown introduces warmth and groundedness for panels and borders */
+  --sage: #964b00;
+  /* Warm gold accents highlight CTAs and key links */
+  --rose: #f4c430;
+  /* Gentle gold wash for subtle highlights and focus states */
+  --rose-light: color-mix(in srgb, var(--rose) 45%, white 55%);
+  /* Cream background keeps sections airy and spa-like */
+  --rose-pale: #f8f4ec;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1f1f1f;
+  --muted: #5a5a5a;
+  --accent: var(--rose);
+  --accent-soft: color-mix(in srgb, var(--rose) 25%, white 75%);
+  --support: color-mix(in srgb, var(--sage) 28%, white 72%);
+  --highlight: color-mix(in srgb, var(--rose) 20%, white 80%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #18251f;
+    --foreground: #f5f1ea;
+    --muted: #d0c4b3;
+    --accent: color-mix(in srgb, var(--rose) 80%, black 20%);
+    --accent-soft: color-mix(in srgb, var(--rose-light) 65%, black 35%);
+    --support: color-mix(in srgb, var(--forest) 70%, black 30%);
+    --highlight: color-mix(in srgb, var(--rose) 35%, white 65%);
   }
+}
+
+html[data-theme="test"] {
+  --background: #fdf9f1;
+  --foreground: #274f40;
+  --muted: #4e5c54;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+a {
+  color: color-mix(in srgb, var(--accent) 70%, var(--forest) 30%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent) 60%, black 40%);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+::selection {
+  background: var(--highlight);
+  color: #1a2e23;
+}
+
+label {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--sage) 20%, white 80%);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--forest) 70%, white 30%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+section {
+  padding-block: clamp(3rem, 6vw, 4rem);
+}
+
+/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
+@media (max-width: 40em) {
+  section {
+    padding-block: 2.75rem;
+  }
+}
+
+/* Fluid content wrapper that centers layouts and provides adaptive gutters */
+.page-shell {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+.surface-section {
+  background: color-mix(in srgb, var(--rose-pale) 92%, white 8%);
+}
+
+.surface-card {
+  background: color-mix(in srgb, var(--support) 65%, white 35%);
+}
+
+.surface-card * {
+  color: color-mix(in srgb, var(--foreground) 92%, black 8%) !important;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent) 70%, black 30%);
+}
+
+.surface-overlay {
+  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
 }
