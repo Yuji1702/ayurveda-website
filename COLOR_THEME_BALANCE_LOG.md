@@ -3,11 +3,11 @@
 ## Style B Palette
 | Token | Hex | Primary Use |
 | --- | --- | --- |
-| --forest | #2F4A3D | Headlines, body text, header/footer surfaces |
-| --sage | #7A9C83 | Card backgrounds, supportive panels |
+| --forest | #3E6A55 | Headlines, body text, header/footer surfaces |
+| --sage | #6B8F6E | Card backgrounds, supportive panels |
 | --rose | #D26D82 | Calls-to-action, buttons, interactive accents |
-| --rose-light | #E9B7C9 | Highlights, soft badges, light gradients |
-| --rose-pale | #F3E7EA | Page background wash, hero foundations |
+| --rose-light | #E48CA7 | Highlights, soft badges, light gradients |
+| --rose-pale | #F9E3E7 | Page background wash, hero foundations |
 
 ## Accent Discipline
 Keeping `--rose` for CTAs and interactive states protects readability; the vivid rose pairs with white text at WCAG AA levels while preventing supporting paragraphs from drifting toward pink. Reserving body copy for `--forest` maintains a professional herbal tone aligned with the physician brand.
