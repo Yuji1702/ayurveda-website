@@ -119,7 +119,7 @@ export default function HomePage() {
           </dl>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(107,142,35,0.26)] via-[color:rgba(200,162,95,0.24)] to-[color:rgba(201,111,72,0.22)] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(45,107,87,0.28)] via-[color:rgba(244,196,48,0.22)] to-[color:rgba(150,75,0,0.2)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"

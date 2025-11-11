@@ -6,13 +6,14 @@
   --rose: #f4c430;
   --rose-light: #f7d86a;
   --rose-pale: #fff7dc;
-  --background: var(--rose-pale);
+  --background: #ffffff;
   --foreground: #1f1f1f;
-  --muted: color-mix(in srgb, var(--forest) 60%, black 40%);
-  --accent: var(--rose);
-  --accent-soft: color-mix(in srgb, var(--rose) 45%, white 55%);
-  --support: color-mix(in srgb, var(--forest) 55%, white 45%);
-  --highlight: color-mix(in srgb, var(--rose) 50%, white 50%);
+  --muted: color-mix(in srgb, var(--forest) 52%, black 48%);
+  --accent: color-mix(in srgb, var(--rose) 70%, var(--sage) 30%);
+  --accent-soft: color-mix(in srgb, var(--rose-light) 35%, white 65%);
+  --support: color-mix(in srgb, var(--sage) 28%, white 72%);
+  --highlight: color-mix(in srgb, var(--rose) 42%, white 58%);
+  --earth: color-mix(in srgb, var(--forest) 60%, var(--sage) 40%);
 }
 
 @theme inline {
@@ -26,20 +27,21 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: color-mix(in srgb, var(--forest) 25%, black 75%);
-    --foreground: color-mix(in srgb, white 92%, var(--rose) 8%);
-    --muted: color-mix(in srgb, var(--rose) 20%, white 80%);
-    --accent: color-mix(in srgb, var(--rose) 85%, white 15%);
-    --accent-soft: color-mix(in srgb, var(--rose-light) 40%, black 60%);
-    --support: color-mix(in srgb, var(--forest) 65%, black 35%);
-    --highlight: color-mix(in srgb, var(--rose) 60%, white 40%);
+    --background: color-mix(in srgb, var(--forest) 18%, black 82%);
+    --foreground: color-mix(in srgb, white 94%, var(--rose) 6%);
+    --muted: color-mix(in srgb, var(--rose) 28%, white 72%);
+    --accent: color-mix(in srgb, var(--rose) 65%, var(--sage) 35%);
+    --accent-soft: color-mix(in srgb, var(--rose-light) 45%, black 55%);
+    --support: color-mix(in srgb, var(--forest) 55%, black 45%);
+    --highlight: color-mix(in srgb, var(--rose) 55%, white 45%);
+    --earth: color-mix(in srgb, var(--forest) 65%, black 35%);
   }
 }
 
 html[data-theme="test"] {
-  --background: #fff9f0;
-  --foreground: #243328;
-  --muted: #4a5a4b;
+  --background: #fdf8ed;
+  --foreground: color-mix(in srgb, black 80%, var(--forest) 20%);
+  --muted: color-mix(in srgb, var(--forest) 58%, black 42%);
 }
 
 *,
@@ -50,17 +52,18 @@ html[data-theme="test"] {
 
 body {
   background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
 }
 
 a {
-  color: color-mix(in srgb, var(--accent) 70%, var(--forest) 30%);
+  color: color-mix(in srgb, var(--accent) 55%, var(--forest) 45%);
   text-decoration: none;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent) 55%, var(--forest) 45%);
+  color: color-mix(in srgb, var(--accent) 45%, var(--forest) 55%);
 }
 
 img,
@@ -72,7 +75,7 @@ video {
 
 ::selection {
   background: var(--highlight);
-  color: #1a2e23;
+  color: color-mix(in srgb, black 85%, var(--forest) 15%);
 }
 
 label {
@@ -80,60 +83,6 @@ label {
   color: var(--foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
-}
-
-a {
-  color: color-mix(in srgb, var(--accent) 70%, var(--forest) 30%);
-  text-decoration: none;
-}
-
-a:hover {
-  color: color-mix(in srgb, var(--accent) 55%, var(--forest) 45%);
-}
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-}
-
-::selection {
-  background: var(--highlight);
-  color: #1a2e23;
-}
-
-label {
-  font-weight: 600;
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  line-height: 1.6;
-}
-
-a {
-  color: color-mix(in srgb, var(--accent) 70%, var(--forest) 30%);
-  text-decoration: none;
-}
-
-a:hover {
-  color: color-mix(in srgb, var(--accent) 55%, var(--forest) 45%);
-}
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-}
-
-::selection {
-  background: var(--highlight);
-  color: #1a2e23;
-}
-
-label {
-  font-weight: 600;
-  color: var(--foreground);
 }
 
 input,
@@ -141,10 +90,10 @@ textarea,
 select {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--muted) 25%, transparent);
+  border: 1px solid color-mix(in srgb, var(--muted) 22%, transparent);
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  background-color: rgba(250, 246, 239, 0.85);
+  background-color: color-mix(in srgb, var(--rose-pale) 55%, white 45%);
   color: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -175,14 +124,12 @@ section {
   padding-block: clamp(3rem, 6vw, 4rem);
 }
 
-/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
 @media (max-width: 40em) {
   section {
     padding-block: 2.75rem;
   }
 }
 
-/* Fluid content wrapper that centers layouts and provides adaptive gutters */
 .page-shell {
   width: min(100%, 72rem);
   margin-inline: auto;
@@ -190,330 +137,40 @@ section {
 }
 
 .surface-section {
-  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
+  background: color-mix(in srgb, var(--background) 88%, var(--earth) 12%);
 }
 
 .surface-card {
-  background: color-mix(in srgb, var(--support) 65%, white 35%);
+  background: color-mix(in srgb, var(--support) 60%, white 40%);
+  color: color-mix(in srgb, var(--foreground) 85%, var(--earth) 15%);
 }
 
-.surface-card * {
-  color: color-mix(in srgb, var(--foreground) 80%, var(--forest) 20%) !important;
+.surface-card :is(p, li, span, small, blockquote) {
+  color: color-mix(in srgb, var(--foreground) 78%, var(--earth) 22%);
+}
+
+.surface-card :is(h1, h2, h3, h4, h5, h6) {
+  color: color-mix(in srgb, var(--foreground) 92%, var(--earth) 8%);
+}
+
+.surface-overlay {
+  background: color-mix(in srgb, var(--background) 70%, var(--earth) 30%);
+  color: color-mix(in srgb, var(--foreground) 82%, var(--earth) 18%);
 }
 
 .btn-primary {
-  background: color-mix(in srgb, var(--accent) 85%, var(--forest) 15%);
+  background: color-mix(in srgb, var(--forest) 65%, var(--sage) 35%);
   color: white;
   border-radius: 0.5rem;
   padding: 0.7rem 1.4rem;
   font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 65%, var(--forest) 35%);
-}
-
-.surface-overlay {
-  background: color-mix(in srgb, var(--background) 65%, var(--forest) 35%);
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  border-radius: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--foreground) 25%, transparent);
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
-}
-
-button,
-input[type="submit"],
-input[type="button"] {
-  cursor: pointer;
-}
-
-button:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-section {
-  padding-block: clamp(3rem, 6vw, 4rem);
-}
-
-/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
-@media (max-width: 40em) {
-  section {
-    padding-block: 2.75rem;
-  }
-}
-
-/* Fluid content wrapper that centers layouts and provides adaptive gutters */
-.page-shell {
-  width: min(100%, 72rem);
-  margin-inline: auto;
-  padding-inline: clamp(1.25rem, 5vw, 3rem);
-}
-
-.surface-section {
-  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
-}
-
-.surface-card {
-  background: color-mix(in srgb, var(--support) 65%, white 35%);
-}
-
-.surface-card * {
-  color: color-mix(in srgb, var(--foreground) 80%, var(--forest) 20%) !important;
-}
-
-.btn-primary {
-  background: color-mix(in srgb, var(--accent) 85%, var(--forest) 15%);
-  color: white;
-  border-radius: 0.5rem;
-  padding: 0.7rem 1.4rem;
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 65%, var(--forest) 35%);
-}
-
-.surface-overlay {
-  background: color-mix(in srgb, var(--background) 65%, var(--forest) 35%);
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  border-radius: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--foreground) 25%, transparent);
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
-}
-
-button,
-input[type="submit"],
-input[type="button"] {
-  cursor: pointer;
-}
-
-button:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-section {
-  padding-block: clamp(3rem, 6vw, 4rem);
-}
-
-/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
-@media (max-width: 40em) {
-  section {
-    padding-block: 2.75rem;
-  }
-}
-
-/* Fluid content wrapper that centers layouts and provides adaptive gutters */
-.page-shell {
-  width: min(100%, 72rem);
-  margin-inline: auto;
-  padding-inline: clamp(1.25rem, 5vw, 3rem);
-}
-
-.surface-section {
-  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
-}
-
-.surface-card {
-  background: color-mix(in srgb, var(--support) 65%, white 35%);
-}
-
-.surface-card * {
-  color: color-mix(in srgb, var(--foreground) 80%, var(--forest) 20%) !important;
-}
-
-.btn-primary {
-  background: color-mix(in srgb, var(--accent) 85%, var(--forest) 15%);
-  color: white;
-  border-radius: 0.5rem;
-  padding: 0.7rem 1.4rem;
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 65%, var(--forest) 35%);
-}
-
-.surface-overlay {
-  background: color-mix(in srgb, var(--background) 65%, var(--forest) 35%);
+  background: color-mix(in srgb, var(--forest) 50%, var(--sage) 50%);
 }
 
 body {
   color: var(--foreground);
 }
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
-}
-
-button,
-input[type="submit"],
-input[type="button"] {
-  cursor: pointer;
-}
-
-button:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-section {
-  padding-block: clamp(3rem, 6vw, 4rem);
-}
-
-/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
-@media (max-width: 40em) {
-  section {
-    padding-block: 2.75rem;
-  }
-}
-
-/* Fluid content wrapper that centers layouts and provides adaptive gutters */
-.page-shell {
-  width: min(100%, 72rem);
-  margin-inline: auto;
-  padding-inline: clamp(1.25rem, 5vw, 3rem);
-}
-
-.btn-primary {
-  background: color-mix(in srgb, var(--accent) 85%, var(--forest) 15%);
-  color: white;
-  border-radius: 0.5rem;
-  padding: 0.7rem 1.4rem;
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 65%, var(--forest) 35%);
-}
-
-.surface-section {
-  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
-}
-
-.surface-card {
-  background: color-mix(in srgb, var(--support) 65%, white 35%);
-  color: color-mix(in srgb, var(--foreground) 82%, var(--forest) 18%);
-}
-
-.surface-card :is(p, li, span, small, blockquote) {
-  color: color-mix(in srgb, var(--foreground) 80%, var(--forest) 20%);
-}
-
-.surface-card :is(h1, h2, h3, h4, h5, h6) {
-  color: color-mix(in srgb, var(--foreground) 92%, var(--forest) 8%);
-}
-
-.surface-overlay {
-  background: color-mix(in srgb, var(--background) 65%, var(--forest) 35%);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
-}
-
-button,
-input[type="submit"],
-input[type="button"] {
-  cursor: pointer;
-}
-
-button:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-section {
-  padding-block: clamp(3rem, 6vw, 4rem);
-}
-
-/* Mobile-first adjustment: tighten vertical rhythm on viewports narrower than 40em (~640px) */
-@media (max-width: 40em) {
-  section {
-    padding-block: 2.75rem;
-  }
-}
-
-/* Fluid content wrapper that centers layouts and provides adaptive gutters */
-.page-shell {
-  width: min(100%, 72rem);
-  margin-inline: auto;
-  padding-inline: clamp(1.25rem, 5vw, 3rem);
-}
-
-.btn-primary {
-  background: color-mix(in srgb, var(--accent) 85%, var(--forest) 15%);
-  color: white;
-  border-radius: 0.5rem;
-  padding: 0.7rem 1.4rem;
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 65%, var(--forest) 35%);
-}
-
-.surface-section {
-  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
-}
-
-.surface-card {
-  background: color-mix(in srgb, var(--support) 65%, white 35%);
-}
-
-
