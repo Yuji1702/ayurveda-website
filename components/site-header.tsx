@@ -29,14 +29,14 @@ export function SiteHeader() {
   };
 
   const linkBaseClasses =
-    "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]";
+    "rounded-full px-3 py-2 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:color-mix(in_srgb,var(--accent)_25%,white_75%)]";
   const navClassName = [
-    "w-full flex-col gap-4 rounded-3xl bg-[color:color-mix(in_srgb,var(--forest)_88%,black_12%)] px-4 py-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0",
+    "w-full flex-col gap-4 rounded-3xl bg-[color:color-mix(in_srgb,var(--forest)_85%,black_15%)] px-4 py-4 shadow-lg md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:bg-transparent md:p-0 md:shadow-none",
     isMenuOpen ? "flex" : "hidden md:flex",
   ].join(" ");
 
   return (
-    <header className="bg-[color:var(--forest)] text-white shadow-sm">
+    <header className="bg-[linear-gradient(135deg,rgba(45,107,87,0.95)0%,rgba(166,124,82,0.82)55%,rgba(45,107,87,0.95)100%)] text-white shadow-sm">
       <div className="page-shell py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex w-full items-center justify-between gap-3 md:w-auto">
@@ -44,7 +44,7 @@ export function SiteHeader() {
               <Link href="/" className="text-lg font-semibold tracking-tight">
                 Dr. Zahida Sadaf
               </Link>
-              <p className="text-sm text-[color:rgba(255,255,255,0.75)]">
+              <p className="text-sm text-[color:rgba(255,255,255,0.78)]">
                 Ayurvedic-Unani Physician &amp; Online Health Consultant
               </p>
             </div>
@@ -82,8 +82,8 @@ export function SiteHeader() {
                       aria-current={active ? "page" : undefined}
                       className={`${linkBaseClasses} ${
                         active
-                          ? "bg-[color:color-mix(in_srgb,var(--accent)_80%,black_20%)]"
-                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_65%,var(--muted)_35%)]"
+                          ? "bg-[color:color-mix(in_srgb,var(--accent)_78%,var(--earth)_22%)]"
+                          : "hover:bg-[color:color-mix(in_srgb,var(--accent)_62%,var(--forest)_38%)]"
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -107,7 +107,7 @@ export function SiteHeader() {
           <div className="hidden md:flex md:items-center">
             <Link
               href="/consultation"
-              className="btn-primary text-sm shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent-soft)]"
+              className="btn-primary text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:color-mix(in_srgb,var(--accent)_25%,white_75%)]"
             >
               Book Consultation
             </Link>

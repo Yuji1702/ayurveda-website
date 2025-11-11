@@ -2,15 +2,16 @@
 
 ## Palette overview
 - `--foreground` (`#1F1F1F` – Charcoal): Primary text tone, keeping content sharp on cream and white foundations.
-- `--background` (`#FFFFFF` – White): Base surface that supports clarity and breathing room across sections.
+- `--background` (`#F9F6F2` – Cream): Base surface that keeps long-form content calm and breathable across sections.
 - `--rose` (`#F4C430` – Warm Gold): Reserved for calls-to-action, interactive highlights, and celebratory accents.
-- `--accent-soft` (`color-mix(--rose 25%, white 75%)` – Soft Gilding): Hover states, outlines, badges, and gentle emphasis fills.
-- `--support` (`color-mix(--sage 28%, white 72%)` – Earthy Mist): Card surfaces, testimonial panels, and pricing table frames.
+- `--accent-soft` (`color-mix(--rose 20%, white 80%)` – Soft Gilding): Hover states, outlines, badges, and gentle emphasis fills.
+- `--support` (`color-mix(--sage 65%, white 35%)` – Olive Mist): Card surfaces, testimonial panels, and pricing table frames.
 - `--forest` (`#2D6B57` – Deep Green): Header/footer anchor, navigation chrome, and gradient roots.
-- `--sage` (`#964B00` – Soft Brown): Stabilizing borders, dividers, and warm neutral touches.
+- `--sage` (`#6B9362` – Soft Olive): Comforting mid-tone for surface tints and navigation backgrounds.
+- `--earth` (`#A67C52` – Warm Brown): Stabilizing borders, dividers, and typographic accents that hint at wood and spice.
 
 ## Why this palette fits holistic wellness
-Deep herbal green evokes vitality and nature, soft brown conveys grounded stability, and luminous gold reflects traditional Ayurvedic luxury. The trio keeps the interface warm and trustworthy while white backdrops provide clarity. Charcoal body text protects readability for visitors seeking detailed guidance.
+Deep herbal green evokes vitality and nature, soft olive surfaces nod to fresh leaves, and warm brown recalls crafted wood and herbal apothecaries. Muted gold accents reinforce premium care while cream backgrounds and charcoal copy preserve clarity. Together the palette feels restorative, balanced, and trustworthy for holistic seekers.
 
 ## Adjusting theme values later
 - Update the CSS variables in `app/globals.css` to tweak the core palette. Every component references these tokens rather than hard-coded colors.

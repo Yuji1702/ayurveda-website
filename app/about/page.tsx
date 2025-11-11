@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="page-shell pb-16">
-      <section className="grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
+      <section className="surface-section motif-leaf soft-shadow grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">
             Meet Dr. Zahida Sadaf
@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-[color:rgba(45,107,87,0.22)] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(45,107,87,0.28)] via-[color:rgba(166,124,82,0.18)] to-[color:rgba(244,196,48,0.22)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Portrait illustration of Dr. Zahida Sadaf smiling confidently"
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-12 surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
+      <section className="mt-12 surface-section motif-divider p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
         <h2 className="text-3xl font-semibold text-[color:var(--foreground)]">Whole-person healing philosophy</h2>
         {/* Medium screens (md) split the cards in two columns while mobile stays stacked */}
         <div className="mt-6 grid gap-6 md:grid-cols-2">

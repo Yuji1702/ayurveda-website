@@ -46,7 +46,7 @@ const serviceCards = [
 export default function ServicesPage() {
   return (
     <div className="page-shell pb-16">
-      <section className="surface-section pt-16">
+      <section className="surface-section motif-leaf soft-shadow pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">Holistic services tailored to you</h1>
           <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
@@ -60,7 +60,7 @@ export default function ServicesPage() {
           {serviceCards.map((card) => (
             <article
               key={card.title}
-              className="flex h-full flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] transition hover:-translate-y-1 hover:shadow-lg"
+              className="surface-card flex h-full flex-col justify-between p-6 ring-1 ring-[color:color-mix(in_srgb,var(--earth)_35%,white_65%)] transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div>
                 <h2 className="text-2xl font-semibold text-[color:var(--foreground)]">{card.title}</h2>

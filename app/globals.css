@@ -1,43 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  /* Deep green anchors the brand with a calm, botanical base */
+  /* Primary olive green evokes rejuvenating botanicals */
   --forest: #2d6b57;
-  /* Soft brown introduces warmth and groundedness for panels and borders */
-  --sage: #964b00;
-  /* Warm gold accents highlight CTAs and key links */
+  /* Soft olive supports cards and navigation backgrounds */
+  --sage: #6b9362;
+  /* Warm brown grounds dividers, borders, and typographic accents */
+  --earth: #a67c52;
+  /* Muted gold reserved for call-to-action emphasis */
   --rose: #f4c430;
-  /* Gentle gold wash for subtle highlights and focus states */
-  --rose-light: color-mix(in srgb, var(--rose) 45%, white 55%);
-  /* Cream background keeps sections airy and spa-like */
-  --rose-pale: #f8f4ec;
-  --background: #ffffff;
+  /* Gentle golden highlight for focus rings and subtle washes */
+  --rose-light: color-mix(in srgb, var(--rose) 35%, white 65%);
+  /* Cream backdrop maintains a spa-like calm */
+  --rose-pale: #f9f6f2;
+  --background: var(--rose-pale);
   --foreground: #1f1f1f;
   --muted: #5a5a5a;
   --accent: var(--rose);
-  --accent-soft: color-mix(in srgb, var(--rose) 25%, white 75%);
-  --support: color-mix(in srgb, var(--sage) 28%, white 72%);
-  --highlight: color-mix(in srgb, var(--rose) 20%, white 80%);
+  --accent-soft: color-mix(in srgb, var(--rose) 20%, white 80%);
+  --support: color-mix(in srgb, var(--sage) 65%, white 35%);
+  --highlight: color-mix(in srgb, var(--rose) 15%, white 85%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  --font-sans: "Nunito", "Quicksand", "Segoe UI", system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
   --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #18251f;
-    --foreground: #f5f1ea;
-    --muted: #d0c4b3;
-    --accent: color-mix(in srgb, var(--rose) 80%, black 20%);
-    --accent-soft: color-mix(in srgb, var(--rose-light) 65%, black 35%);
-    --support: color-mix(in srgb, var(--forest) 70%, black 30%);
-    --highlight: color-mix(in srgb, var(--rose) 35%, white 65%);
+  --background: color-mix(in srgb, var(--forest) 12%, black 88%);
+  --foreground: color-mix(in srgb, white 92%, var(--forest) 8%);
+  --muted: color-mix(in srgb, var(--earth) 55%, white 45%);
+  --accent: color-mix(in srgb, var(--rose) 75%, black 25%);
+  --accent-soft: color-mix(in srgb, var(--rose-light) 70%, black 30%);
+  --support: color-mix(in srgb, var(--forest) 55%, black 45%);
+  --highlight: color-mix(in srgb, var(--rose) 25%, white 75%);
   }
 }
 
@@ -61,12 +63,12 @@ body {
 }
 
 a {
-  color: color-mix(in srgb, var(--accent) 70%, var(--forest) 30%);
+  color: color-mix(in srgb, var(--accent) 65%, var(--earth) 35%);
   text-decoration: none;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent) 60%, black 40%);
+  color: color-mix(in srgb, var(--accent) 55%, black 45%);
 }
 
 img,
@@ -91,7 +93,7 @@ textarea,
 select {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--sage) 20%, white 80%);
+  border: 1px solid color-mix(in srgb, var(--earth) 20%, white 80%);
   padding: 0.75rem 1rem;
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.9);
@@ -103,8 +105,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: color-mix(in srgb, var(--forest) 70%, white 30%);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  border-color: color-mix(in srgb, var(--forest) 75%, white 25%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 button,
@@ -140,29 +142,77 @@ section {
 }
 
 .surface-section {
-  background: color-mix(in srgb, var(--rose-pale) 92%, white 8%);
+  /* Cream wash with a whisper of olive for grounded calm */
+  background: color-mix(in srgb, var(--rose-pale) 88%, var(--sage) 12%);
+  border-radius: 1.75rem;
 }
 
 .surface-card {
-  background: color-mix(in srgb, var(--support) 65%, white 35%);
+  /* Gentle card tone anchored by the soft olive palette */
+  background: color-mix(in srgb, var(--support) 92%, white 8%);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 36px -24px rgba(21, 54, 41, 0.45);
 }
 
 .surface-card * {
-  color: color-mix(in srgb, var(--foreground) 92%, black 8%) !important;
+  color: color-mix(in srgb, var(--foreground) 90%, black 10%) !important;
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 70%, var(--earth) 30%) 100%);
   color: white;
-  border-radius: 0.5rem;
-  padding: 0.7rem 1.4rem;
-  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.6rem;
+  font-weight: 700;
+  box-shadow: 0 18px 24px -18px rgba(166, 124, 82, 0.55);
 }
 
 .btn-primary:hover {
-  background: color-mix(in srgb, var(--accent) 70%, black 30%);
+  background: color-mix(in srgb, var(--accent) 60%, var(--earth) 40%);
 }
 
 .surface-overlay {
-  background: color-mix(in srgb, var(--background) 82%, var(--forest) 18%);
+  background: color-mix(in srgb, var(--background) 85%, rgba(47, 62, 47, 0.15) 15%);
+}
+
+/* Nature-inspired motif overlays for hero and testimonial sections */
+.motif-leaf {
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      color-mix(in srgb, var(--sage) 35%, white 65%) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      color-mix(in srgb, var(--accent) 18%, white 82%) 0%,
+      transparent 50%
+    ),
+    linear-gradient(160deg, rgba(109, 147, 98, 0.18) 0%, rgba(166, 124, 82, 0.12) 55%, rgba(244, 196, 48, 0.18) 100%);
+  background-blend-mode: soft-light, normal;
+}
+
+.motif-divider {
+  position: relative;
+}
+
+.motif-divider::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -2.5rem;
+  height: 3.5rem;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    color-mix(in srgb, var(--earth) 25%, white 75%) 35%,
+    color-mix(in srgb, var(--accent) 15%, white 85%) 50%,
+    color-mix(in srgb, var(--earth) 25%, white 75%) 65%,
+    transparent 100%
+  );
+  opacity: 0.55;
+  filter: blur(12px);
+}
+
+.soft-shadow {
+  box-shadow: 0 24px 48px -30px rgba(29, 79, 60, 0.55);
 }

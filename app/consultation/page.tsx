@@ -51,7 +51,7 @@ const pricing = [
 export default function ConsultationPage() {
   return (
     <div className="page-shell pb-16">
-      <section className="surface-section pt-16">
+      <section className="surface-section motif-leaf soft-shadow pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">Begin your consultation</h1>
           <p className="mt-6 text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
@@ -62,7 +62,7 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <section className="mt-12 surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10" aria-labelledby="process">
+      <section className="mt-12 surface-section motif-divider rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10" aria-labelledby="process">
         <div className="max-w-3xl">
           <h2 id="process" className="text-3xl font-semibold text-[color:var(--foreground)]">
             Step-by-step booking process
@@ -76,9 +76,9 @@ export default function ConsultationPage() {
           {steps.map((step, index) => (
             <li
               key={step.title}
-              className="flex flex-col gap-3 rounded-3xl bg-[color:color-mix(in_srgb,var(--accent-soft)_45%,white_55%)] p-6"
+              className="flex flex-col gap-3 rounded-3xl bg-[color:color-mix(in_srgb,var(--sage)_28%,white_72%)] p-6 shadow-sm"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_80%,var(--muted)_20%)] text-sm font-semibold text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:color-mix(in_srgb,var(--accent)_75%,var(--earth)_25%)] text-sm font-semibold text-white">
                 {index + 1}
               </span>
               <h3 className="text-lg font-semibold text-[color:var(--foreground)]">{step.title}</h3>
@@ -89,7 +89,7 @@ export default function ConsultationPage() {
       </section>
 
       <section className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] lg:items-start">
-        <div className="rounded-3xl bg-white/95 p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
+        <div className="surface-section soft-shadow p-8 ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
           <h2 className="text-3xl font-semibold text-[color:var(--foreground)]">Consultation investment</h2>
           <p className="mt-4 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
             Choose the currency that matches your location. Membership bundles with additional
@@ -133,7 +133,7 @@ export default function ConsultationPage() {
             </p>
           </div>
         </div>
-        <div className="rounded-3xl surface-card p-8 shadow-lg sm:p-10">
+        <div className="rounded-3xl surface-card motif-leaf p-8 shadow-lg sm:p-10">
           <h2 className="text-3xl font-semibold">Share your health story</h2>
           <p className="mt-3">
             Complete the form and we will respond within one business day with next steps.

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="page-shell pb-16">
-      <section className="grid gap-10 pt-16 lg:grid-cols-[minmax(0,1fr),minmax(0,0.8fr)] lg:items-start">
+      <section className="surface-section motif-leaf soft-shadow grid gap-10 pt-16 lg:grid-cols-[minmax(0,1fr),minmax(0,0.8fr)] lg:items-start">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)]">We’re here to help</h1>
           <p className="text-lg text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
@@ -21,7 +21,7 @@ export default function ContactPage() {
             responds within one business day and provides compassionate guidance throughout
             your healing journey.
           </p>
-          <div className="rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-8">
+          <div className="surface-card p-6 ring-1 ring-[color:color-mix(in_srgb,var(--earth)_35%,white_65%)] sm:p-8">
             <h2 className="text-xl font-semibold text-[color:var(--foreground)]">Contact details</h2>
             <ul className="mt-4 space-y-3 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
               <li>
@@ -57,7 +57,7 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-          <div className="rounded-3xl bg-white/80 p-6 shadow-inner ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-8">
+          <div className="surface-section p-6 shadow-inner ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-8">
             <h2 className="text-xl font-semibold text-[color:var(--foreground)]">Connect on social media</h2>
             <ul className="mt-4 space-y-2 text-sm text-[color:color-mix(in_srgb,var(--foreground)_65%,var(--muted)_35%)]">
               <li>
@@ -74,7 +74,7 @@ export default function ContactPage() {
           </div>
         </div>
         {/* Desktop breakpoint keeps the inquiry form visually balanced beside support cards */}
-        <div className="rounded-3xl surface-card p-8 shadow-lg sm:p-10">
+        <div className="rounded-3xl surface-card motif-leaf p-8 shadow-lg sm:p-10">
           <h2 className="text-2xl font-semibold">Send us a message</h2>
           <p className="mt-3">
             Share your health goals, preferred consultation mode, and any urgent questions. We
@@ -132,13 +132,13 @@ export default function ContactPage() {
               </button>
             </div>
           </form>
-          <div className="mt-8 rounded-2xl surface-overlay p-5 text-sm shadow-inner">
+            <div className="mt-8 rounded-2xl surface-overlay p-5 text-sm shadow-inner">
             <h3 className="font-semibold">Clinic location</h3>
             <p className="mt-2 text-[color:color-mix(in_srgb,var(--foreground)_70%,var(--muted)_30%)]">
               Hyderabad, Telangana, India. Virtual consultations are available for clients in
               Canada, the United States, the United Kingdom, Australia, and beyond.
             </p>
-            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,var(--muted)_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--support)_65%,var(--forest)_35%)]">
+            <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl bg-white/80 p-4 text-xs text-[color:color-mix(in_srgb,var(--foreground)_75%,var(--muted)_25%)] ring-1 ring-[color:color-mix(in_srgb,var(--sage)_55%,var(--earth)_45%)]">
               Interactive map integration coming soon.
             </div>
           </div>

@@ -75,7 +75,7 @@ const testimonials = [
 export default function HomePage() {
   return (
     <div className="page-shell pb-16">
-      <section className="surface-section grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
+      <section className="surface-section motif-leaf soft-shadow grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[color:color-mix(in_srgb,var(--accent)_65%,var(--muted)_35%)]">
             Your Online Health Consultant
@@ -119,7 +119,7 @@ export default function HomePage() {
           </dl>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(45,107,87,0.28)] via-[color:rgba(150,75,0,0.18)] to-[color:rgba(244,196,48,0.24)] blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-[color:rgba(45,107,87,0.32)] via-[color:rgba(166,124,82,0.2)] to-[color:rgba(244,196,48,0.26)] blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.svg"
             alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
@@ -132,7 +132,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="why-choose-us" className="surface-section rounded-3xl p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
+      <section aria-labelledby="why-choose-us" className="surface-section motif-divider p-8 shadow-sm ring-1 ring-[color:color-mix(in_srgb,var(--support)_35%,white_65%)] sm:p-10">
         <div>
           <h2 id="why-choose-us" className="text-3xl font-semibold text-[color:var(--foreground)]">
             Why choose Dr. Sadaf?
@@ -194,7 +194,7 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="testimonials">
-          <div className="rounded-3xl surface-card px-8 py-12 shadow-lg">
+          <div className="rounded-3xl surface-card motif-leaf px-8 py-12 shadow-lg">
             <div className="mx-auto max-w-3xl text-center">
               <h2 id="testimonials" className="text-3xl font-semibold">
                 Stories of renewed balance

@@ -112,7 +112,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <div className="flex min-h-screen flex-col bg-[linear-gradient(180deg,rgba(45,107,87,0.08)0%,rgba(244,196,48,0.06)45%,rgba(255,255,255,1)100%)]">
+        <div className="flex min-h-screen flex-col bg-[linear-gradient(180deg,rgba(45,107,87,0.16)0%,rgba(166,124,82,0.12)40%,rgba(244,196,48,0.08)100%)]">
           <SiteHeader />
           <main id="main-content" className="flex-1">
             {children}
